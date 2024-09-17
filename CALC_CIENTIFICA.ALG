@@ -1,8 +1,8 @@
 Algoritmo "Calc_cientifica"
 // 
 //  
-// Descrição   : Calculadora cientifica  - BancodeBravos
-// Autor(a)    : Matheus Volotao,Mateus 2, Bruna Camille, Guilherme C.
+// DescriÃ§Ã£o   : Calculadora cientifica  - BancodeBravos
+// Autor(a)    : Matheus Volotao, Matheus Souza, Bruna Camille, Guilherme C.
 // Abimael S., Eduardo D., Joao,Caue,Raissa J.,
 // Data atual  : 9/14/2024
 
