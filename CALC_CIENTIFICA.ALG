@@ -9,6 +9,14 @@ Algoritmo "Calc_cientifica"
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
 gv_retBaseDez:inteiro
 
+funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
+inicio
+   se y = 1 entao
+      retorne 1
+   senao
+      retorne y * fatorial(y - 1)
+   fimse
+fimfuncao
 
 funcao f_baseDezBaseDois(x:inteiro):inteiro
 
