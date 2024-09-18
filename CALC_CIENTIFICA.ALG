@@ -17,6 +17,13 @@ var
 
 fimfuncao
 
+funcao f_funcaoDois(x :inteiro):inteiro
+
+var
+//declaracao loc funcaoDois
+
+
+fimfuncao
 
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
