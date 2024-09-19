@@ -18,21 +18,6 @@ inicio
    fimse
 fimfuncao
 
-funcao f_baseDezBaseDois(x:inteiro):inteiro
-
-var
-//declaracao loc baseDezBaseDois
-
-fimfuncao
-
-funcao f_funcaoDois(x :inteiro):inteiro
-
-var
-//declaracao loc funcaoDois
-
-
-fimfuncao
-
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
 
