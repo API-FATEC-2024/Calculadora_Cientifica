@@ -9,6 +9,16 @@ Algoritmo "Calc_cientifica"
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
 gv_retBaseDez:inteiro
 
+função subtracao(M1,M2: real) : real
+ var
+ resultado : real
+ inicio
+   leia (M1)
+   leia (M2)
+   resultado <- M1-M2
+   retorne resultado
+fimfunção
+
 funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
 inicio
    se y = 1 entao
