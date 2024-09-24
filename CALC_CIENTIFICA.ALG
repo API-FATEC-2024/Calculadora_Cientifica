@@ -38,6 +38,46 @@ inicio
    fimse
 fimfuncao
 
+funcao f_calculoJuros (): real
+var
+   lv_juros: real
+   lv_capital, lv_taxa, lv_tempo: real
+   lv_montante: real
+   lv_resultado: real
+
+inicio
+   //calculo juros simples
+   Escreva ("digite o valor do capital:")
+   leia(lv_capital)
+   Escreva ("digite o valor do tempo:")
+   leia(lv_tempo)
+   Escreva ("digite o valor da taxa:")
+   leia(lv_taxa)
+
+   lv_juros <- (lv_capital*lv_taxa*lv_tempo)/100
+
+   Escreval ("O valor do juros é:" ,lv_juros)
+
+   //calculo do lv_montante
+   lv_montante <- lv_juros + lv_capital
+
+   Escreval ("o valor do montante é:", lv_montante)
+   //calculo juros composto
+   Escreva ("digite o valor do capital:")
+   leia(lv_capital)
+   Escreva ("digite o valor do tempo:")
+   leia(lv_tempo)
+   Escreva ("digite o valor da taxa:")
+   leia(lv_taxa)
+
+   lv_resultado <- lv_capital *(1+lv_taxa)^lv_tempo
+
+   Escreval ("o valor do juros composto é: ", lv_resultado)
+
+   retorne 0
+   
+fimfuncao // f_calculoJuros ()
+
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
 
