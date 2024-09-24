@@ -81,7 +81,12 @@ fimfuncao // f_calculoJuros ()
 funcao ConcatenarString(s1,s2: caracter) : caracter
 var
 lv_res: caracter
+string1,string2: caracter
 Inicio
+   escreva("Digite a primeira string: ")
+   leia(string1)
+   escreva("Digite a segunda string: ")
+   leia(string2)
    resultado <- string1 + string2
    escreva(lv_res)
    retorne(0)
