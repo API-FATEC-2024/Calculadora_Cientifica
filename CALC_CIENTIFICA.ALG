@@ -78,20 +78,20 @@ inicio
    
 fimfuncao // f_calculoJuros ()
 
-funcao ConcatenarString(s1,s2: caracter) : caracter
+funcao ConcatenarString() : caracter
 var
 lv_res: caracter
-string1,string2: caracter
+lv_string1,lv_string2: caracter
 Inicio
    escreva("Digite a primeira string: ")
-   leia(string1)
+   leia(lv_string1)
    escreva("Digite a segunda string: ")
-   leia(string2)
-   resultado <- string1 + string2
+   leia(lv_string2)
+   lv_res <- lv_string1 + lv_string2
    escreva(lv_res)
    retorne(0)
    
-fimfuncao // ConcatenarString(s1,s2: caracter)
+fimfuncao // ConcatenarString()
 
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
