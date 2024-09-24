@@ -78,6 +78,17 @@ inicio
    
 fimfuncao // f_calculoJuros ()
 
+Var
+string1, string2, resultado: caracter
+funcao ConcatenarString(s1,s2: caracter) : caracter
+var
+resultado: caracter
+Inicio
+   resultado <- string1 + string2
+   retorne(resultado)
+   
+fimfuncao
+
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
 
