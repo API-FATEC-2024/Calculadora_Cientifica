@@ -19,15 +19,18 @@ função soma(N1,N2: real) : real
    retorne resultado
 fimfunção
 
-função subtracao(M1,M2: real) : real
+ função f_calculoSubtracao() : real
  var
+ lv_M1,lv_M2: real
  resultado : real
  inicio
-   leia (M1)
-   leia (M2)
-   resultado <- M1-M2
-   retorne resultado
-fimfunção
+   leia (lv_M1)
+   leia (lv_M2)
+   resultado <- lv_M1-lv_M2
+   retorne 0
+   escreva (resultado)
+
+   fimfunção
 
 funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
 inicio
