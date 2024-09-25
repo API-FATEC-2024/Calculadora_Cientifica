@@ -102,6 +102,77 @@ inicio
 
 fimfuncao // f_jurosComposto
 
+//Função B16 -> B2
+procedimento f_calculoHexadecimalToBinario()
+  var
+    auxdigitoE,numHex,hex, digitoE: caracter
+    i,j, potencia,tam: inteiro
+  inicio
+    Escreval("Digite o número Hexadecimal: ")
+    leia(numHex)
+    tam<- compr(numHex)
+    hex <- ""
+    j<-1
+    enquanto tam > 0 faca
+      auxdigitoE <- copia(numHex:j:1)
+      escolha auxdigitoE
+         caso "0"
+           //resto<- "0"
+           digitoE <- "0000"
+         caso "1"
+           //resto<- "1"
+           digitoE <- "0001"
+         caso "2"
+           //resto<- "2"
+           digitoE <- "0010"
+         caso "3"
+           //resto<- "3"
+           digitoE <- "0011"
+         caso "4"
+           //resto<- "4"
+           digitoE <- "0100"
+         caso "5"
+           //resto<- "5"
+           digitoE <- "0101"
+         caso "6"
+           //resto<- "6"
+           digitoE <- "0110"
+         caso "7"
+           //resto<- "7"
+           digitoE <- "0111"
+         caso "8"
+           //resto<- "8"
+           digitoE <- "1000"
+         caso "9"
+           //resto<- "9"
+           digitoE <- "1001"
+         caso  "A"
+           //resto<- "A"
+           digitoE <- "1010"
+         caso "B"
+           //resto<- "B"
+           digitoE <- "1011"
+         caso "C"
+           //resto<- "C"
+           digitoE <- "1100"
+         caso "D"
+           //resto<- "D"
+           digitoE <- "1101"
+         caso "E"
+           //resto<- "E"
+           digitoE <- "1110"
+         caso "F"
+           //resto<- "F"
+           digitoE <- "1111"
+      fimescolha
+      hex <-  hex + digitoE
+      tam <- tam -1
+      j<- j + 1
+    fimenquanto
+    escreval("Resultado da conversão para Binário : ")
+    escreval(hex)
+fimprocedimento
+
 funcao ConcatenarString() : caracter
 var
 lv_res: caracter
