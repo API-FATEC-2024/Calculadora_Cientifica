@@ -72,7 +72,21 @@ inicio
    lv_montante <- lv_juros + lv_capital
 
    Escreval ("o valor do montante é:", lv_montante)
-   //calculo juros composto
+
+   retorne 0
+   
+fimfuncao // f_calculoJuros ()
+
+funcao f_jurosComposto (): real
+
+var
+   lv_juros: real
+   lv_capital, lv_taxa, lv_tempo: real
+   lv_montante: real
+   lv_resultado: real
+
+inicio
+//calculo juros composto
    Escreva ("digite o valor do capital:")
    leia(lv_capital)
    Escreva ("digite o valor do tempo:")
@@ -85,8 +99,8 @@ inicio
    Escreval ("o valor do juros composto é: ", lv_resultado)
 
    retorne 0
-   
-fimfuncao // f_calculoJuros ()
+
+fimfuncao // f_jurosComposto
 
 funcao ConcatenarString() : caracter
 var
