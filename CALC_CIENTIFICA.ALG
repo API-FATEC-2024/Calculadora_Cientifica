@@ -12,13 +12,16 @@ gv_retBaseDez:inteiro
  função f_calculoSoma() : real
  var
  lv_N1,lv_N2: real
- resultado : real
+ lv_resultado : real
  inicio
+ escreva ("Escreva o primeiro número: ")
    leia (lv_N1)
+   escreva ("Escreva o segundo número: ")
    leia (lv_N2)
-   resultado <- lv_N1+lv_N2
+   lv_resultado <- lv_N1+lv_N2
+   escreva ("O resultado é: ")
+   escreva (lv_resultado)
    retorne 0
-   escreva (resultado)
  fimfunção
 
  função f_calculoSubtracao() : real
@@ -34,7 +37,7 @@ gv_retBaseDez:inteiro
    escreva ("O resultado é: ")
    escreva (lv_resultado)
    retorne 0
-   fimfunção
+  fimfunção
 
 funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
 inicio
