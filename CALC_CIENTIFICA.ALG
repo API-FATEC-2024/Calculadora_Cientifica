@@ -9,15 +9,17 @@ Algoritmo "Calc_cientifica"
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
 gv_retBaseDez:inteiro
 
-função soma(N1,N2: real) : real
+ função f_calculoSoma() : real
  var
+ lv_N1,lv_N2: real
  resultado : real
  inicio
-   leia (N1)
-   leia (N2)
-   resultado <- N1+N2
-   retorne resultado
-fimfunção
+   leia (lv_N1)
+   leia (lv_N2)
+   resultado <- lv_N1+lv_N2
+   retorne 0
+   escreva (resultado)
+ fimfunção
 
  função f_calculoSubtracao() : real
  var
