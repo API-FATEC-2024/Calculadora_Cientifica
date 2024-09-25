@@ -102,6 +102,65 @@ inicio
 
 fimfuncao // f_jurosComposto
 
+//Função B2 -> B16
+procedimento f_calculoBinarioToHexacimal()
+  var
+    resto, digitoE, numBin, Hexa: caracter
+    tam,posi: inteiro
+  inicio
+    Hexa <- ""
+    Escreval("Digite o número Binario: ")
+    leia(numBin)
+    posi<-1
+    tam <- compr(numBin)
+    enquanto tam % 4 <> 0 faca
+      numBin <- "0" + numBin
+      tam <- tam + 1
+    fimenquanto
+    enquanto posi <= tam faca
+      resto <- copia(numBin, posi, 4)
+      escolha resto
+        caso "0000"
+          digitoE <- "0"
+        caso "0001"
+          digitoE <- "1"
+        caso "0010"
+          digitoE <- "2"
+        caso "0011"
+          digitoE <- "3"
+        caso "0100"
+          digitoE <- "4"
+        caso "0101"
+          digitoE <- "5"
+        caso "0110"
+          digitoE <- "6"
+        caso "0111"
+          digitoE <- "7"
+        caso "1000"
+          digitoE <- "8"
+        caso "1001"
+          digitoE <- "9"
+        caso "1010"
+          digitoE <- "A"
+        caso "1011"
+          digitoE <- "B"
+        caso "1100"
+          digitoE <- "C"
+        caso "1101"
+          digitoE <- "D"
+        caso "1110"
+          digitoE <- "E"
+        caso "1111"
+          digitoE <- "F"
+      fimescolha
+      Hexa <-  Hexa + digitoE
+      posi <- posi + 4
+    fimenquanto
+    escreval("Resultado da conversão para Hexadecimal : ")
+    escreva(Hexa)
+fimprocedimento
+
+
 //Função B16 -> B2
 procedimento f_calculoHexadecimalToBinario()
   var
