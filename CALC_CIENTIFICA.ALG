@@ -24,14 +24,16 @@ gv_retBaseDez:inteiro
  função f_calculoSubtracao() : real
  var
  lv_M1,lv_M2: real
- resultado : real
+ lv_resultado : real
  inicio
+ escreva ("Escreva o primeiro número: ")
    leia (lv_M1)
+   escreva ("Escreva o segundo número: ")
    leia (lv_M2)
-   resultado <- lv_M1-lv_M2
+   lv_resultado <- lv_M1-lv_M2
+   escreva ("O resultado é: ")
+   escreva (lv_resultado)
    retorne 0
-   escreva (resultado)
-
    fimfunção
 
 funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
