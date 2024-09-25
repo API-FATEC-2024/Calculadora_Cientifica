@@ -103,6 +103,65 @@ Inicio
    
 fimfuncao // ConcatenarString()
 
+funcao f_navegacao():inteiro
+
+var
+   lv_item:inteiro
+   lv_retorno:real
+
+inicio
+   lv_item <--1
+
+   enquanto lv_item <> 0 faca
+      escreval("Menu Calculadora")
+
+      escreval("Selecione uma operacao,digite sua escolha")
+
+
+      escreval("1-Soma")
+      escreval("2-Subtracao")
+      escreval("3-Multiplicacao")
+      escreval("4-Divisao")
+      escreval("5-Fatorial")
+      escreval("6-Juros Simples")
+      escreval("7-Juros Compostos")
+      escreval("8-Conversao B2 para B10")
+      escreval("9-Conversao B10 para B2")
+      escreval("10-Concatenacao de strings")
+      escreval("0-Encerrar calculadora")
+
+      leia(lv_item)
+
+      escolha lv_item
+      caso 1
+         escreval("1 foi escolhido")
+      caso 2
+         escreval("2 foi escolhido")
+      caso 3
+         escreval("3 foi escolhido")
+      caso 4
+         escreval("4 foi escolhido")
+      caso 5
+         escreval("5 foi escolhido")
+      caso 6
+         escreval("6 foi escolhido")
+      caso 7
+         escreval("7 foi escolhido")
+      caso 8
+         escreval("8 foi escolhido")
+      caso 9
+         escreval("9 foi escolhido")
+      caso 10
+         escreval("10 foi escolhido")
+      caso 11
+         escreval("11 foi escolhido")
+      fimescolha
+
+   fimenquanto
+
+
+fimfuncao //navegacao()
+
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
 
