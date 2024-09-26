@@ -39,14 +39,35 @@ gv_retBaseDez:inteiro
    retorne 0
   fimfunção
 
-funcao fatorial(y:inteiro) : inteiro // Declaracao funcao fatorial
+funcao f_fatorial(): real
+var
+    lv_resultado: real
+    lv_NumFat: real
+    lv_contador: real
+
 inicio
-   se y = 1 entao
-      retorne 1
-   senao
-      retorne y * fatorial(y - 1)
-   fimse
-fimfuncao
+    Escreval("Digite um número")
+    leia(lv_NumFat)
+
+    enquanto lv_NumFat <= 0 faca
+        Escreval("Digite um numero maior que zero")
+        leia(lv_NumFat)
+    fimenquanto
+
+    lv_resultado <- 1
+    lv_contador <- 1
+
+    enquanto lv_NumFat > lv_contador faca
+        lv_resultado <- lv_resultado * lv_NumFat
+        lv_NumFat <- lv_NumFat - 1
+    fimenquanto
+
+    Escreval("O fatorial é: ", lv_resultado)
+    
+    retorne 0
+    
+    fimfuncao
+
 
 funcao f_calculoJuros (): real
 var
