@@ -59,7 +59,20 @@ Funcao f_divisao (): real
   Retorne 0
 fimfuncao
 
+Funcao f_multiplicacao (): real
 
+  Var
+  lv_mult1: Real
+  lv_mult2: Real
+
+  Inicio
+  Escreva ("Digite o primeiro valor: ")
+  Leia (lv_mult1)
+  Escreva ("Digite o segundo valor: ")
+  Leia (lv_mult2)
+  Escreva ("Resultado= ", lv_mult1*lv_mult2)
+  Retorne 0
+  fimfuncao
 
 funcao f_fatorial(): real
 var
