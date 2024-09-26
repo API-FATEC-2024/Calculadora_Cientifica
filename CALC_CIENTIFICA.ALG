@@ -37,7 +37,27 @@ gv_retBaseDez:inteiro
    escreva ("O resultado é: ")
    escreva (lv_resultado)
    retorne 0
-  fimfunção
+fimfunção
+
+Funcao f_divisao (): real
+
+  Var
+  lv_div1: Real
+  lv_div2: Real
+
+
+  Inicio
+  Escreva ("Digite o dividendo: ")
+  Leia (lv_div1)
+  Escreva ("Digite o divisor: ")
+  Leia (lv_div2)
+		se (lv_div2 = 0) então
+		  escreva ("Não é possível dividir por 0")
+       senao
+        Escreva ("Resultado= ", lv_div1/lv_div2)
+      fimse
+  Retorne 0
+fimfuncao
 
 
 
