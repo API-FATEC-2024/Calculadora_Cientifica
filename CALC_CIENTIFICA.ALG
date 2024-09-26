@@ -39,42 +39,7 @@ gv_retBaseDez:inteiro
    retorne 0
   fimfunção
 
- Funcao f_divisao (): real
 
-  Var
-  lv_div1: Real
-  lv_div2: Real
-
-
-  Inicio
-  Escreva ("Digite o dividendo: ")
-  Leia (lv_div1)
-  Escreva ("Digite o divisor: ")
-  Leia (lv_div2)
-		se (lv_div2 = 0) então
-		  escreva ("Não é possível dividir por 0")
-       senao
-        Escreva ("Resultado= ", lv_div1/lv_div2)
-      fimse
-  Retorne 0
-  
-fimfuncao
-
-Funcao f_multiplicacao (): real
-
-  Var
-  lv_mult1: Real
-  lv_mult2: Real
-
-  Inicio
-  Escreva ("Digite o primeiro valor: ")
-  Leia (lv_mult1)
-  Escreva ("Digite o segundo valor: ")
-  Leia (lv_mult2)
-  Escreva ("Resultado= ", lv_mult1*lv_mult2)
-  Retorne 0
-
-  fimfuncao
 
 funcao f_fatorial(): real
 var
