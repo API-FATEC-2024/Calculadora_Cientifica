@@ -68,6 +68,28 @@ inicio
     
     fimfuncao
 
+funcao f_segundoGrau():real
+ var
+  a,b,c,delta,x1,x2:real
+ inicio
+  leia(a)
+  leia(b)
+  leia(c)
+  delta <-0
+  x1<-0
+  x2<-0
+  delta <- b*b-4*(a)*(c)
+  escreval ("O delta é:  ", delta)
+  se delta >=0 então
+    x1<-(-b+(delta)^(1/2))/(2*a)
+    x2<-(-b-(delta)^(1/2))/(2*a)
+    escreval ("A raiz de x1 é:  ", x1)
+    escreval ("A raiz de x2 é:  ", x2)
+  senão
+    escreva ("Não possui raiz real")
+  Fimse
+  retorne 0
+Fimfuncao
 
 funcao f_calculoJuros (): real
 var
