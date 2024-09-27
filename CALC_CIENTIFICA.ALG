@@ -180,63 +180,70 @@ inicio
 
 fimfuncao // f_jurosComposto
 
-//Função B2 -> B16
-procedimento f_calculoBinarioToHexacimal()
+funcao f_calculoBinarioToHexacimal():real
   var
-    resto, digitoE, numBin, Hexa: caracter
-    tam,posi: inteiro
+    lv_resto, lv_digitoE, lv_numBin, lv_numHexa: caracter
+    lv_tamNumBin, lv_posicaoDig: inteiro
   inicio
-    Hexa <- ""
-    Escreval("Digite o número Binario: ")
-    leia(numBin)
-    posi<-1
-    tam <- compr(numBin)
-    enquanto tam % 4 <> 0 faca
-      numBin <- "0" + numBin
-      tam <- tam + 1
+
+    lv_numHexa <- ""
+    Escreval("Digite o número Binário: ")
+    leia(lv_numBin)
+    lv_posicaoDig<-1
+    lv_tamNumBin <- compr(lv_numBin)
+
+    // Verifica se o número de dígitos binários é divisível por 4, adiciona zeros à esquerda caso precise
+    enquanto lv_tamNumBin % 4 <> 0 faca
+      lv_numBin <- "0" + lv_numBin
+      lv_tamNumBin <- lv_tamNumBin + 1
     fimenquanto
-    enquanto posi <= tam faca
-      resto <- copia(numBin, posi, 4)
-      escolha resto
+
+    // Percorre o número binário em blocos de 4 dígitos para converter em hexadecimal
+    enquanto lv_posicaoDig <= lv_tamNumBin faca
+      lv_resto <- copia(lv_numBin, lv_posicaoDig, 4)
+      escolha lv_resto
         caso "0000"
-          digitoE <- "0"
+          lv_digitoE <- "0"
         caso "0001"
-          digitoE <- "1"
+          lv_digitoE <- "1"
         caso "0010"
-          digitoE <- "2"
+          lv_digitoE <- "2"
         caso "0011"
-          digitoE <- "3"
+          lv_digitoE <- "3"
         caso "0100"
-          digitoE <- "4"
+          lv_digitoE <- "4"
         caso "0101"
-          digitoE <- "5"
+          lv_digitoE <- "5"
         caso "0110"
-          digitoE <- "6"
+          lv_digitoE <- "6"
         caso "0111"
-          digitoE <- "7"
+          lv_digitoE <- "7"
         caso "1000"
-          digitoE <- "8"
+          lv_digitoE <- "8"
         caso "1001"
-          digitoE <- "9"
+          lv_digitoE <- "9"
         caso "1010"
-          digitoE <- "A"
+          lv_digitoE <- "A"
         caso "1011"
-          digitoE <- "B"
+          lv_digitoE <- "B"
         caso "1100"
-          digitoE <- "C"
+          lv_digitoE <- "C"
         caso "1101"
-          digitoE <- "D"
+          lv_digitoE <- "D"
         caso "1110"
-          digitoE <- "E"
+          lv_digitoE <- "E"
         caso "1111"
-          digitoE <- "F"
+          lv_digitoE <- "F"
       fimescolha
-      Hexa <-  Hexa + digitoE
-      posi <- posi + 4
+
+      lv_numHexa <-  lv_numHexa + lv_digitoE
+      lv_posicaoDig <- lv_posicaoDig + 4
     fimenquanto
-    escreval("Resultado da conversão para Hexadecimal : ")
-    escreva(Hexa)
-fimprocedimento
+
+    escreval("Resultado da conversão para lv_numHexadecimal: ")
+    escreva(lv_numHexa)
+	retorne 0
+fimfuncao
 
 
 //Função B16 -> B2
