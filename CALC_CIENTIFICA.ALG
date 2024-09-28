@@ -7,7 +7,7 @@ Algoritmo "Calc_cientifica"
 // Data atual  : 9/14/2024
 
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
-gv_retBaseDez:inteiro
+gv_retorno:inteiro
 
  função f_calculoSoma() : real
  var
@@ -345,7 +345,7 @@ inicio
       escreval("5-Fatorial")
       escreval("6-Juros Simples")
       escreval("7-Juros Compostos")
-      escreval("8-Conversao B2 para B10")
+      escreval("8-Conversao B16 para B2")
       escreval("9-Conversao B10 para B2")
       escreval("10-Concatenacao de strings")
       escreval("0-Encerrar calculadora")
@@ -354,25 +354,25 @@ inicio
 
       escolha lv_item
       caso 1
-         escreval("1 foi escolhido")
+         lv_retorno <- f_calculoSoma()
       caso 2
-         escreval("2 foi escolhido")
+         lv_retorno <- f_calculoSubtracao()
       caso 3
-         escreval("3 foi escolhido")
+         lv_retorno <- f_multiplicacao ()
       caso 4
-         escreval("4 foi escolhido")
+         lv_retorno <- f_divisao ()
       caso 5
-         escreval("5 foi escolhido")
+         lv_retorno <- f_fatorial()
       caso 6
-         escreval("6 foi escolhido")
+         lv_retorno <- f_calculoJuros ()
       caso 7
-         escreval("7 foi escolhido")
+         lv_retorno <- f_jurosComposto ()
       caso 8
-         escreval("8 foi escolhido")
+         lv_retorno <- f_calculoHexadecimalToBinario()
       caso 9
          escreval("9 foi escolhido")
       caso 10
-         escreval("10 foi escolhido")
+         lv_retorno <- ConcatenarString()
       caso 11
          escreval("11 foi escolhido")
       fimescolha
@@ -380,12 +380,11 @@ inicio
    fimenquanto
 
 
-fimfuncao //navegacao()
+fimfuncao //f_navegacao()
 
 Inicio //INICIO DO PROGRAM PRINCIPAL
 
 
-
-
+gv_retorno <- f_navegacao()
 
 Fimalgoritmo
