@@ -346,7 +346,7 @@ inicio
       escreval("6-Juros Simples")
       escreval("7-Juros Compostos")
       escreval("8-Conversao B16 para B2")
-      escreval("9-Conversao B10 para B2")
+      escreval("9-Conversao B2 para B16")
       escreval("10-Concatenacao de strings")
       escreval("0-Encerrar calculadora")
 
@@ -370,7 +370,7 @@ inicio
       caso 8
          lv_retorno <- f_calculoHexadecimalToBinario()
       caso 9
-         escreval("9 foi escolhido")
+         lv_retorno <- f_calculoBinarioToHexacimal()
       caso 10
          lv_retorno <- ConcatenarString()
       caso 11
