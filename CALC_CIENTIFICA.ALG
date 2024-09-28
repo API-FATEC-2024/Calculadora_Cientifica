@@ -308,17 +308,17 @@ funcao f_calculoHexadecimalToBinario():real
     retorne 0
 fimfuncao
 
-funcao ConcatenarString() : caracter
+funcao ConcatenarString() : real
 var
-lv_res: caracter
-lv_string1,lv_string2: caracter
+lv_res: real
+lv_string1,lv_string2: real
 Inicio
-   escreva("Digite a primeira string: ")
+   escreval("Digite a primeira string: ")
    leia(lv_string1)
-   escreva("Digite a segunda string: ")
+   escreval("Digite a segunda string: ")
    leia(lv_string2)
    lv_res <- lv_string1 + lv_string2
-   escreva(lv_res)
+   escreval(lv_res)
    retorne(0)
    
 fimfuncao // ConcatenarString()
