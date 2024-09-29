@@ -180,6 +180,23 @@ inicio
 
 fimfuncao // f_jurosComposto
 
+//Função que converte um numero decimal pra binario
+funcao f_calculoDecimalToBinario(): real
+  var
+    lv_numBin: caracter
+    resto,lv_numDec: inteiro
+  inicio
+    leia(lv_numDec)
+    lv_numBin<- ""
+    enquanto lv_numDec > 0 faca
+      resto <- lv_numDec%2
+      lv_numBin <- NumpCarac(resto) + lv_numBin
+      lv_numDec <- lv_numDec div 2
+    fimenquanto
+    escreva(lv_numBin)
+    retorne 0
+fimfuncao
+
 
 //Função que calcula a conversao de binario para decimal
 funcao f_calculoBinarioToDecimal(): real
