@@ -54,7 +54,7 @@ Funcao f_divisao (): real
 		se (lv_div2 = 0) então
 		  escreva ("Não é possível dividir por 0")
        senao
-        Escreva ("Resultado= ", lv_div1/lv_div2)
+        Escreval ("Resultado= ", lv_div1/lv_div2)
       fimse
   Retorne 0
 fimfuncao
