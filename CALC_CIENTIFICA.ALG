@@ -52,7 +52,7 @@ Funcao f_divisao (): real
   Escreva ("Digite o divisor: ")
   Leia (lv_div2)
 		se (lv_div2 = 0) então
-		  escreva ("Não é possível dividir por 0")
+		  escreval ("Não é possível dividir por 0")
        senao
         Escreval ("Resultado= ", lv_div1/lv_div2)
       fimse
