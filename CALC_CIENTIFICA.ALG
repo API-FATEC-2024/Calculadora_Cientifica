@@ -76,16 +76,14 @@ Funcao f_multiplicacao (): real
 
 funcao f_fatorial(): real
 var
-    lv_resultado: real
-    lv_NumFat: real
-    lv_contador: real
+    lv_resultado,lv_NumFat,lv_contador: real
 
 inicio
-    Escreval("Digite um número")
+    Escreval("Digite um número: ")
     leia(lv_NumFat)
 
-    enquanto lv_NumFat <= 0 faca
-        Escreval("Digite um numero maior que zero")
+    enquanto lv_NumFat < 0 faca
+        Escreval("Digite um numero maior ou igual a zero!")
         leia(lv_NumFat)
     fimenquanto
 
@@ -97,11 +95,10 @@ inicio
         lv_NumFat <- lv_NumFat - 1
     fimenquanto
 
-    Escreval("O fatorial é: ", lv_resultado)
-    
+    escreval("O fatorial é: ", lv_resultado)
+
     retorne 0
-    
-    fimfuncao
+fimfuncao
 
 funcao f_segundoGrau():real
  var
