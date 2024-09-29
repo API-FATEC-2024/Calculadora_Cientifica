@@ -393,6 +393,8 @@ inicio
       escreval("8-Conversao B16 para B2")
       escreval("9-Conversao B2 para B16")
       escreval("10-Concatenacao de strings")
+      escreval("11-Conversao B10 para B2")
+      escreval("12-Conversao B2 para B10")
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
@@ -419,7 +421,9 @@ inicio
       caso 10
          lv_retorno <- ConcatenarString()
       caso 11
-         escreval("11 foi escolhido")
+         lv_retorno <- f_calculoDecimalToBinario()
+      caso 12
+         lv_retorno <- f_calculoBinarioToDecimal()
       fimescolha
 
    fimenquanto
