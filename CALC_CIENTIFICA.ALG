@@ -186,14 +186,18 @@ funcao f_calculoDecimalToBinario(): real
     lv_numBin: caracter
     resto,lv_numDec: inteiro
   inicio
+    escreval("Digite o numero Decimal:")
     leia(lv_numDec)
     lv_numBin<- ""
+
     enquanto lv_numDec > 0 faca
       resto <- lv_numDec%2
       lv_numBin <- NumpCarac(resto) + lv_numBin
       lv_numDec <- lv_numDec div 2
     fimenquanto
-    escreva(lv_numBin)
+
+    escreval("Resultado da conversão para numero binario: ")
+    escreval(lv_numBin)
     retorne 0
 fimfuncao
 
@@ -221,7 +225,7 @@ funcao f_calculoBinarioToDecimal(): real
     fimenquanto
 
     escreval("Resultado da conversão para numero Decimal: ")
-	 escreval(lv_numDec)
+    escreval(lv_numDec)
     retorne 0
 fimfuncao
 
