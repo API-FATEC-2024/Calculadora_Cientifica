@@ -180,6 +180,34 @@ inicio
 
 fimfuncao // f_jurosComposto
 
+
+//Função que calcula a conversao de binario para decimal
+funcao f_calculoBinarioToDecimal(): real
+  var
+    lv_numDec, lv_potencia,lv_digito: real
+    lv_numBin: caracter
+    lv_tam:inteiro
+    //lv_potencia,lv_numBin,lv_digito: inteiro
+  inicio
+    Escreval("Digite o numero Binario:")
+    leia(lv_numBin)
+    lv_tam<- compr(lv_numBin)
+    lv_numDec <- 0
+    lv_potencia <- 0
+
+    enquanto lv_tam > 0 faca
+      lv_digito <- caracpnum( copia(lv_numBin:lv_tam:1) )
+      lv_numDec <- lv_numDec + lv_digito * 2^lv_potencia
+      lv_numBin <- copia(lv_numBin:1:lv_tam - 1)
+      lv_potencia <- lv_potencia + 1
+      lv_tam<- lv_tam - 1
+    fimenquanto
+
+    escreval("Resultado da conversão para numero Decimal: ")
+	 escreval(lv_numDec)
+    retorne 0
+fimfuncao
+
 funcao f_calculoBinarioToHexacimal():real
   var
     lv_resto, lv_digitoE, lv_numBin, lv_numHexa: caracter
