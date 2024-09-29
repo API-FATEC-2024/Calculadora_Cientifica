@@ -70,7 +70,7 @@ Funcao f_multiplicacao (): real
   Leia (lv_mult1)
   Escreva ("Digite o segundo valor: ")
   Leia (lv_mult2)
-  Escreva ("Resultado= ", lv_mult1*lv_mult2)
+  Escreval ("Resultado= ", lv_mult1*lv_mult2)
   Retorne 0
   fimfuncao
 
