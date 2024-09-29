@@ -357,20 +357,21 @@ funcao f_calculoHexadecimalToBinario():real
     retorne 0
 fimfuncao
 
+//Concatena na ordem digitada duas strings
 funcao ConcatenarString() : real
 var
-lv_res: real
-lv_string1,lv_string2: real
+lv_res,lv_string1,lv_string2: caracter
 Inicio
    escreval("Digite a primeira string: ")
    leia(lv_string1)
    escreval("Digite a segunda string: ")
    leia(lv_string2)
    lv_res <- lv_string1 + lv_string2
+   escreval("Resultado da combinação de Strings: ")
    escreval(lv_res)
-   retorne(0)
-   
-fimfuncao // ConcatenarString()
+   retorne 0
+
+fimfuncao
 
 funcao f_navegacao():inteiro
 
