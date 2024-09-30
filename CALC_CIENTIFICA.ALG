@@ -162,18 +162,21 @@ var
 
 inicio
 //calculo juros composto
-   Escreva ("digite o valor do capital:")
+   Escreva ("Digite o valor do capital:")
    leia(lv_capital)
-   Escreva ("digite o valor do tempo:")
+   Escreva ("Digite o valor do tempo (em meses):")
    leia(lv_tempo)
-   Escreva ("digite o valor da taxa:")
+   Escreva ("Digite o valor da taxa (em porcentagem ao mês):")
    leia(lv_taxa)
 
-   lv_resultado <- lv_capital *(1+lv_taxa)^lv_tempo
+   lv_resultado <- lv_capital *(1+(lv_taxa/100))^lv_tempo
 
-   Escreval ("o valor do juros composto é: ", lv_resultado)
-
+   escreval ("o valor do juros composto é: ", lv_resultado - lv_capital)
+   
+   escreval ("o valor do Montante é: ", lv_resultado)
    retorne 0
+
+fimfuncao
 
 fimfuncao // f_jurosComposto
 
