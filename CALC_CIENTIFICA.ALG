@@ -176,8 +176,6 @@ inicio
    escreval ("o valor do Montante é: ", lv_resultado)
    retorne 0
 
-fimfuncao
-
 fimfuncao // f_jurosComposto
 
 //Função que converte um numero decimal pra binario
