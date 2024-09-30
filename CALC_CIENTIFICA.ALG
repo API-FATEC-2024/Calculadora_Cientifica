@@ -392,7 +392,7 @@ inicio
       escreval("4-Divisao")
       escreval("5-Fatorial")
       escreval("6-Juros Simples")
-      escreval("7-Juros Compostos")
+//    escreval("7-Juros Compostos")
       escreval("8-Conversao B16 para B2")
       escreval("9-Conversao B2 para B16")
       escreval("10-Concatenacao de strings")
