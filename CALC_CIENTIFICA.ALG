@@ -132,11 +132,11 @@ var
 
 inicio
    //calculo juros simples
-   Escreva ("digite o valor do capital:")
+   Escreva ("Digite o valor do capital:")
    leia(lv_capital)
-   Escreva ("digite o valor do tempo:")
+   Escreva ("Digite o valor do tempo (em meses):")
    leia(lv_tempo)
-   Escreva ("digite o valor da taxa:")
+   Escreva ("Digite o valor da taxa (em porcentagem ao mês):")
    leia(lv_taxa)
 
    lv_juros <- (lv_capital*lv_taxa*lv_tempo)/100
