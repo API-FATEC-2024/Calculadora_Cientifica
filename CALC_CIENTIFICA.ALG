@@ -429,6 +429,7 @@ inicio
          lv_retorno <- f_calculoBinarioToDecimal()
       fimescolha
 
+	limpatela // Eduardo D. -> Modificação para limpar a tela a cada execução da calculadora.
    fimenquanto
 
 
