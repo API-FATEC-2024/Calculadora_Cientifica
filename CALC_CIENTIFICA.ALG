@@ -376,6 +376,7 @@ funcao f_navegacao():inteiro
 var
    lv_item:inteiro
    lv_retorno:real
+   lv_menu:caracter
 
 inicio
    lv_item <--1
@@ -429,6 +430,11 @@ inicio
          lv_retorno <- f_calculoBinarioToDecimal()
       fimescolha
 
+se lv_item <> 0 entao
+escreval("Digite qualquer caracter para retornar ao menu.")
+leia(lv_menu)
+fimse
+	
 	limpatela // Eduardo D. -> Modificação para limpar a tela a cada execução da calculadora.
    fimenquanto
 
