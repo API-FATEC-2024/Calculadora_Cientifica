@@ -26,3 +26,16 @@ Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnolog
 O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresentação na Feira de Soluções, para o gerenciamento e acompanhamento das entregas foi utilizado o próprio Github.
 
 ![Sprint](Documentacao/images/Sprint.png)
+
+# Autores 📃
+| Foto | Aluno | Função                                                                                                  |
+|-|-|-|
+| ![Abimael](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Abimael%20Foto.jpg) | Abimael | Product Owner |
+| ![Matheus V](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Volotao%20Foto.jpg) | Matheus Volotão | Scrum Master |
+| ![Bruna](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Bruna%20Foto.jpg) | Bruna Camille Barbosa de Oliveira | Developer Team |
+| ![Caue](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Caue%20Foto.jpg) | Cauê Gandini de Almeida | Developer Team |
+| ![Eduardo](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Eduardo%20Foto.jpg) | Eduardo | Developer Team |
+| ![Guilherme](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Guilherme%20Foto.jpg) | Guilherme Gomos Crisostomo | Developer Team |
+| ![Joao](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Joao%20Foto.jpg) | João Gabriel | Developer Team | 
+| ![Matheus S](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Souza%20Foto.jpg) | Matheus Sousa | Developer Team |
+| ![Raissa](https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Raissa%20Foto.jpg) | Raissa | Developer Team |
