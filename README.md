@@ -25,4 +25,4 @@ Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnolog
 
 O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresentação na Feira de Soluções, para o gerenciamento e acompanhamento das entregas foi utilizado o próprio Github.
 
-![Sprint](Documentacao/images/Sprint.jpg)
+![Sprint](Documentacao/images/Sprint.png)
