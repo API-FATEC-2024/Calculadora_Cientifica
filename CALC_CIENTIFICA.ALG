@@ -157,7 +157,7 @@ funcao f_jurosComposto (): real
 var
    x: real
 
-funcao f_juroscomposto(): real
+funcao f_jurosComposto(): real
 
 var
    lv_juros: real
@@ -185,7 +185,7 @@ fimfuncao // f_jurosComposto
 
 inicio
 
-x <- f_juroscomposto()
+x <- f_jurosComposto()
 
 fimalgoritmo
   
