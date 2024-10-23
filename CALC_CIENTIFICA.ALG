@@ -1,6 +1,6 @@
 Algoritmo "Calc_cientifica"
-// 
-//  
+//
+//
 // Descrição   : Calculadora cientifica  - BancodeBravos
 // Autor(a)    : Matheus Volotao, Matheus Souza, Bruna Camille, Guilherme C.
 // Abimael S., Eduardo D., Joao,Caue,Raissa J.,
@@ -20,7 +20,7 @@ gv_retorno:inteiro
    leia (lv_N2)
    lv_resultado <- lv_N1+lv_N2
    escreva ("O resultado é: ")
-   escreva (lv_resultado)
+   escreval (lv_resultado:1:2)
    retorne 0
  fimfunção
 
@@ -35,7 +35,7 @@ gv_retorno:inteiro
    leia (lv_M2)
    lv_resultado <- lv_M1-lv_M2
    escreva ("O resultado é: ")
-   escreva (lv_resultado)
+   escreval (lv_resultado:1:2)
    retorne 0
 fimfunção
 
@@ -54,7 +54,7 @@ Funcao f_divisao (): real
 		se (lv_div2 = 0) então
 		  escreval ("Não é possível dividir por 0")
        senao
-        Escreval ("Resultado= ", lv_div1/lv_div2)
+        Escreval ("O resultado é: ", lv_div1/lv_div2:1:2)
       fimse
   Retorne 0
 fimfuncao
@@ -70,7 +70,7 @@ Funcao f_multiplicacao (): real
   Leia (lv_mult1)
   Escreva ("Digite o segundo valor: ")
   Leia (lv_mult2)
-  Escreval ("Resultado= ", lv_mult1*lv_mult2)
+  Escreval ("O resultado é: ", lv_mult1*lv_mult2:1:2)
   Retorne 0
   fimfuncao
 
@@ -115,8 +115,8 @@ funcao f_segundoGrau():real
   se delta >=0 então
     x1<-(-b+(delta)^(1/2))/(2*a)
     x2<-(-b-(delta)^(1/2))/(2*a)
-    escreval ("A raiz de x1 é:  ", x1)
-    escreval ("A raiz de x2 é:  ", x2)
+    escreval ("A raiz de x1 é:  ", x1:1:2)
+    escreval ("A raiz de x2 é:  ", x2:1:2)
   senão
     escreva ("Não possui raiz real")
   Fimse
@@ -141,15 +141,15 @@ inicio
 
    lv_juros <- (lv_capital*lv_taxa*lv_tempo)/100
 
-   Escreval ("O valor do juros é:" ,lv_juros)
+   Escreval ("O valor do juros é:" ,lv_juros:1:2)
 
    //calculo do lv_montante
    lv_montante <- lv_juros + lv_capital
 
-   Escreval ("o valor do montante é:", lv_montante)
+   Escreval ("o valor do montante é:", lv_montante:1:2)
 
    retorne 0
-   
+
 fimfuncao // f_calculoJuros ()
 
 funcao f_jurosComposto (): real
@@ -171,9 +171,9 @@ inicio
 
    lv_resultado <- lv_capital *(1+(lv_taxa/100))^lv_tempo
 
-   escreval ("o valor do juros composto é: ", lv_resultado - lv_capital)
-   
-   escreval ("o valor do Montante é: ", lv_resultado)
+   escreval ("o valor do juros composto é: ", lv_resultado - lv_capital:1:2)
+
+   escreval ("o valor do Montante é: ", lv_resultado:1:2)
    retorne 0
 
 fimfuncao // f_jurosComposto
@@ -434,7 +434,7 @@ se lv_item <> 0 entao
 escreval("Digite qualquer caracter para retornar ao menu.")
 leia(lv_menu)
 fimse
-	
+
 	limpatela // Eduardo D. -> Modificação para limpar a tela a cada execução da calculadora.
    fimenquanto
 
