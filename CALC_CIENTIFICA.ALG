@@ -95,7 +95,7 @@ inicio
         lv_NumFat <- lv_NumFat - 1
     fimenquanto
 
-    escreval("O fatorial é: ", lv_resultado)
+    escreval("O fatorial é: ", lv_resultado:1:2)
 
     retorne 0
 fimfuncao
