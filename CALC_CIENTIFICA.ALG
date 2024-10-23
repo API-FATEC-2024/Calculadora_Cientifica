@@ -155,6 +155,11 @@ fimfuncao // f_calculoJuros ()
 funcao f_jurosComposto (): real
 
 var
+   x: real
+
+funcao f_juroscomposto(): real
+
+var
    lv_juros: real
    lv_capital, lv_taxa, lv_tempo: real
    lv_montante: real
@@ -176,6 +181,14 @@ inicio
    escreval ("o valor do Montante é: ", lv_resultado:1:2)
    retorne 0
 
+fimfuncao // f_jurosComposto
+
+inicio
+
+x <- f_juroscomposto()
+
+fimalgoritmo
+  
 fimfuncao // f_jurosComposto
 
 //Função que converte um numero decimal pra binario
