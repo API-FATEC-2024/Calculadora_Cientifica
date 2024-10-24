@@ -152,12 +152,12 @@ inicio
 
 fimfuncao // f_calculoJuros ()
 
-funcao f_jurosComposto (): real
+funcao f_juroscomposto (): real
 
 var
    x: real
 
-funcao f_jurosComposto(): real
+funcao f_juroscomposto(): real
 
 var
    lv_juros: real
@@ -185,11 +185,11 @@ fimfuncao // f_jurosComposto
 
 inicio
 
-x <- f_jurosComposto()
+x <- f_juroscomposto()
 
 fimalgoritmo
   
-fimfuncao // f_jurosComposto
+fimfuncao // f_juroscomposto
 
 //Função que converte um numero decimal pra binario
 funcao f_calculoDecimalToBinario(): real
