@@ -152,8 +152,6 @@ inicio
 
 fimfuncao // f_calculoJuros ()
 
-funcao f_juroscomposto (): real
-
 var
    x: real
 
