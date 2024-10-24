@@ -227,6 +227,105 @@ funcao f_calculoBinarioToDecimal(): real
     retorne 0
 fimfuncao
 
+//FUNÇÕES OCTAIS
+//FUNCAO OCTAL PRA BINARIO
+funcao f_calculoOctaltoBinario() : real
+ var
+    lv_digitoOct, lv_numOCt, lv_numBin, lv_digitoEmBin: caracter
+    lv_posicao, lv_tamanho: inteiro
+ inicio
+
+    Escreval("Digite o número Octal: ")
+    leia(lv_numOct)
+    lv_tamanho <- compr(lv_numOct)
+    lv_numBin <- ""
+    lv_posicao <- 1
+
+    enquanto lv_tamanho > 0 faca
+      lv_digitoOct <- copia(lv_numOct:lv_posicao:1)
+
+      escolha lv_digitoOct
+         caso "0"
+           lv_digitoEmBin <- "000"
+         caso "1"
+           lv_digitoEmBin <- "001"
+         caso "2"
+           lv_digitoEmBin <- "010"
+         caso "3"
+           lv_digitoEmBin <- "011"
+         caso "4"
+           lv_digitoEmBin <- "100"
+         caso "5"
+           lv_digitoEmBin <- "101"
+         caso "6"
+           lv_digitoEmBin <- "110"
+         caso "7"
+           lv_digitoEmBin <- "111"
+
+      fimescolha
+
+      // Adiciona o dígito hexadecimal ao resultado final e atualiza contadores
+      lv_numBin <-  lv_numBin + lv_digitoEmBin
+      lv_tamanho <- lv_tamanho - 1
+      lv_posicao <- lv_posicao + 1
+    fimenquanto
+
+    escreval("Resultado da conversão para Binário: ")
+    escreval(lv_numBin)
+    retorne 0
+fimfuncao
+
+// FUNCAO BINARIO PRA OCTAL
+funcao f_calculoBinariOtoOctal() : real
+  Var
+    lv_resto, lv_digitoE, lv_numBin, lv_numOctal: caracter
+    lv_tamNumBin, lv_posicaoDig: inteiro
+  inicio
+
+    lv_numOctal <- ""
+    Escreval("Digite o número Binário: ")
+    leia(lv_numBin)
+    lv_posicaoDig<-1
+    lv_tamNumBin <- compr(lv_numBin)
+
+
+    enquanto lv_tamNumBin % 3 <> 0 faca
+      lv_numBin <- "0" + lv_numBin
+      lv_tamNumBin <- lv_tamNumBin + 1
+    fimenquanto
+
+
+    enquanto lv_posicaoDig <= lv_tamNumBin faca
+      lv_resto <- copia(lv_numBin, lv_posicaoDig, 3)
+      escolha lv_resto
+        caso "000"
+          lv_digitoE <- "0"
+        caso "001"
+          lv_digitoE <- "1"
+        caso "010"
+          lv_digitoE <- "2"
+        caso "011"
+          lv_digitoE <- "3"
+        caso "100"
+          lv_digitoE <- "4"
+        caso "101"
+          lv_digitoE <- "5"
+        caso "110"
+          lv_digitoE <- "6"
+        caso "111"
+          lv_digitoE <- "7"
+      fimescolha
+
+      lv_numOctal <-  lv_numOctal + lv_digitoE
+      lv_posicaoDig <- lv_posicaoDig + 3
+    fimenquanto
+
+    escreval("Resultado da conversão para Octal: ")
+    escreval(lv_numOctal)
+	retorne 0
+fimfuncao
+
+// FUNCAO BINARIO PRA HEXADECIMAL
 funcao f_calculoBinarioToHexacimal():real
   var
     lv_resto, lv_digitoE, lv_numBin, lv_numHexa: caracter
@@ -399,10 +498,12 @@ inicio
       escreval("10-Concatenacao de strings")
       escreval("11-Conversao B10 para B2")
       escreval("12-Conversao B2 para B10")
+      escreval("13-Conversao B8 para B2")
+      escreval("14-Conversao B2 para 8")
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
-
+      limpatela
       escolha lv_item
       caso 1
          lv_retorno <- f_calculoSoma()
@@ -428,6 +529,10 @@ inicio
          lv_retorno <- f_calculoDecimalToBinario()
       caso 12
          lv_retorno <- f_calculoBinarioToDecimal()
+      caso 13
+         lv_retorno <- f_calculoOctaltoBinario()
+      caso 14
+         lv_retorno <- f_calculoBinariotoOctal()
       fimescolha
 
 se lv_item <> 0 entao
