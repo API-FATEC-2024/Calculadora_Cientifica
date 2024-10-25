@@ -455,7 +455,7 @@ funcao f_calculoHexadecimalToBinario():real
 fimfuncao
 
 //Concatena na ordem digitada duas strings
-funcao ConcatenarString() : real
+funcao f_concatenarString() : real
 var
 lv_res,lv_string1,lv_string2: caracter
 Inicio
