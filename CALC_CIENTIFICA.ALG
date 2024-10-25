@@ -524,7 +524,7 @@ inicio
       caso 9
          lv_retorno <- f_calculoBinarioToHexacimal()
       caso 10
-         lv_retorno <- ConcatenarString()
+         lv_retorno <- f_concatenarString()
       caso 11
          lv_retorno <- f_calculoDecimalToBinario()
       caso 12
