@@ -500,6 +500,8 @@ inicio
       escreval("12-Conversao B2 para B10")
       escreval("13-Conversao B8 para B2")
       escreval("14-Conversao B2 para 8")
+      escreval("15-Resolução de equação do segundo grau")
+	
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
@@ -533,8 +535,8 @@ inicio
          lv_retorno <- f_calculoOctaltoBinario()
       caso 14
          lv_retorno <- f_calculoBinariotoOctal()
-	caso 15
-	lv_retorno <- f_segundoGrau()
+      caso 15
+	 lv_retorno <- f_segundoGrau()
       fimescolha
 
 se lv_item <> 0 entao
