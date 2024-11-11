@@ -533,6 +533,8 @@ inicio
          lv_retorno <- f_calculoOctaltoBinario()
       caso 14
          lv_retorno <- f_calculoBinariotoOctal()
+	caso 15
+	lv_retorno <- f_segundoGrau()
       fimescolha
 
 se lv_item <> 0 entao
