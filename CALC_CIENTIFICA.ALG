@@ -19,8 +19,12 @@ gv_retorno:inteiro
    escreva ("Escreva o segundo número: ")
    leia (lv_N2)
    lv_resultado <- lv_N1+lv_N2
+ se lv_resultado > 1000000000000000 então
+   escreval ("Limite da soma ultrapassado")
+   senão
    escreva ("O resultado é: ")
    escreval (lv_resultado:1:2)
+ fimse
    retorne 0
  fimfunção
 
