@@ -95,6 +95,11 @@ inicio
         leia(lv_NumFat)
     fimenquanto
 
+    enquanto lv_NumFat >= 171 faca
+        Escreval("ERRO: Digite um numero menor, valor limite excedido")
+        leia(lv_NumFat)
+    fimenquanto
+
     lv_resultado <- 1
     lv_contador <- 1
 
