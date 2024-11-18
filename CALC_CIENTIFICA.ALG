@@ -38,8 +38,12 @@ gv_retorno:inteiro
    escreva ("Escreva o segundo número: ")
    leia (lv_M2)
    lv_resultado <- lv_M1-lv_M2
+se lv_M1 > 1000000000000000 entao
+   escreval ("Limite da subtração ultrapassado")
+   senão
    escreva ("O resultado é: ")
    escreval (lv_resultado:1:2)
+fimse
    retorne 0
 fimfunção
 
