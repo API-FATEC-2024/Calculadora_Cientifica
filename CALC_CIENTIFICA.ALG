@@ -114,26 +114,37 @@ inicio
 fimfuncao
 
 funcao f_segundoGrau():real
- var
-  a,b,c,delta,x1,x2:real
- inicio
-  leia(a)
-  leia(b)
-  leia(c)
-  delta <-0
-  x1<-0
-  x2<-0
-  delta <- b*b-4*(a)*(c)
-  escreval ("O delta é:  ", delta)
-  se delta >=0 então
-    x1<-(-b+(delta)^(1/2))/(2*a)
-    x2<-(-b-(delta)^(1/2))/(2*a)
-    escreval ("A raiz de x1 é:  ", x1:1:2)
-    escreval ("A raiz de x2 é:  ", x2:1:2)
-  senão
-    escreva ("Não possui raiz real")
-  Fimse
-  retorne 0
+ Var
+   a, b, c, delta, raiz1, raiz2: real
+
+Inicio
+   EscrevaL("Digite o coeficiente a: ")
+   Leia(a)
+   Se a = 0 entao
+      EscrevaL("Não é uma equação do segundo grau.")
+   Senao
+      EscrevaL("Digite o coeficiente b: ")
+      Leia(b)
+      EscrevaL("Digite o coeficiente c: ")
+      Leia(c)
+
+      delta <- b * b - 4 * a * c
+      EscrevaL("O valor de delta é: ", delta)
+
+      Se delta < 0 entao
+         EscrevaL("Sem raízes reais.")
+      Senao
+         Se delta = 0 entao
+            raiz1 <- -b / (2 * a)
+            EscrevaL("Raiz única: ", raiz1)
+         Senao
+            raiz1 <- (-b + raizQ(delta)) / (2 * a)
+            raiz2 <- (-b - raizQ(delta)) / (2 * a)
+            EscrevaL("Raízes: ", raiz1:1:2, " e ", raiz2:1:2)
+         FimSe
+      FimSe
+   FimSe
+   retorne 0
 Fimfuncao
 
 funcao f_calculoJuros (): real
