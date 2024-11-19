@@ -140,7 +140,7 @@ Inicio
          Senao
             raiz1 <- (-b + raizQ(delta)) / (2 * a)
             raiz2 <- (-b - raizQ(delta)) / (2 * a)
-            EscrevaL("Raízes: ", raiz1:1:2, " e ", raiz2:1:2)
+            EscrevaL("As raízes são ", "x1:",raiz1:1:2, " e ", "x2:",raiz2:1:2)
          FimSe
       FimSe
    FimSe
@@ -525,7 +525,7 @@ inicio
       escreval("13-Conversao B8 para B2")
       escreval("14-Conversao B2 para 8")
       escreval("15-Resolução de equação do segundo grau")
-	
+
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
