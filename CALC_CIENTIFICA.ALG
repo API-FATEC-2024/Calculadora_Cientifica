@@ -9,7 +9,7 @@ Algoritmo "Calc_cientifica"
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
 gv_retorno:inteiro
 
- função f_calculoSoma() : real
+ funcao f_calculoSoma() : real
  var
  lv_N1,lv_N2: real
  lv_resultado : real
@@ -28,7 +28,7 @@ gv_retorno:inteiro
    retorne 0
  fimfunção
 
- função f_calculoSubtracao() : real
+ funcao f_calculoSubtracao() : real
  var
  lv_M1,lv_M2: real
  lv_resultado : real
@@ -352,13 +352,35 @@ fimfuncao
 // FUNCAO BINARIO PRA HEXADECIMAL
 funcao f_calculoBinarioToHexacimal():real
   var
-    lv_resto, lv_digitoE, lv_numBin, lv_numHexa: caracter
-    lv_tamNumBin, lv_posicaoDig: inteiro
+    lv_resto, lv_digitoE, lv_numBin, lv_numHexa,aux: caracter
+    lv_tamNumBin,i, lv_posicaoDig: inteiro
+    lv_numBinReal:real
+    lv_ehValido:logico
   inicio
 
     lv_numHexa <- ""
-    Escreval("Digite o número Binário: ")
-    leia(lv_numBin)
+    repita
+          Escreval("Digite o número Binário: ")
+          leia(lv_numBin)
+          // Inicializa a variável de validação
+          lv_ehValido <- verdadeiro
+          // Verifica cada caractere da string
+          se   lv_numBin = "" entao
+                lv_ehValido<- falso
+          fimse
+
+          para i <- 1 ate compr(lv_numBin) faca
+                 aux <- copia(lv_numBin,i,1)
+                 //escreval("char: ", aux)
+                 se (aux <> "1") e (aux <> "0") entao
+                    lv_ehValido<- falso
+                 fimse
+          fimpara
+          
+          se (nao lv_ehValido) entao
+            escreval("Número inválido! Insira apenas números binários (0 ou 1).")
+          fimse
+    ate (lv_ehValido)
     lv_posicaoDig<-1
     lv_tamNumBin <- compr(lv_numBin)
 
@@ -409,7 +431,13 @@ funcao f_calculoBinarioToHexacimal():real
       lv_numHexa <-  lv_numHexa + lv_digitoE
       lv_posicaoDig <- lv_posicaoDig + 4
     fimenquanto
-
+    // retirar os 0 as esquerdas do numero
+    aux <- copia(lv_numHexa,1,1)
+    enquanto aux = "0" faca
+        // escreval("primeiro nuemero:", aux)
+        lv_numHexa<- copia(lv_numHexa,2,compr(lv_numHexa))
+        aux <- copia(lv_numHexa,1,1)
+    fimenquanto
     escreval("Resultado da conversão para lv_numHexadecimal: ")
     escreva(lv_numHexa)
 	retorne 0
