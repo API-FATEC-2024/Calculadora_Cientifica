@@ -84,7 +84,7 @@ Funcao f_multiplicacao (): real
 
 funcao f_fatorial(): real
 var
-    lv_resultado,lv_NumFat,lv_contador: real
+    lv_resultado,lv_NumFat,lv_contador,lv_validador: real
 
 inicio
     Escreval("Digite um número: ")
@@ -106,6 +106,21 @@ inicio
     enquanto lv_NumFat > lv_contador faca
         lv_resultado <- lv_resultado * lv_NumFat
         lv_NumFat <- lv_NumFat - 1
+    fimenquanto
+
+    lv_validador <- lv_resultado - INT(lv_resultado)
+
+    enquanto lv_validador > 0 faca
+    EScreval("ERRO: digite um numero inteiro")
+    leia(lv_NumFat)
+    lv_resultado <-1
+    lv_contador <-1
+
+    enquanto lv_NumFat > 1 faca
+     lv_resultado <- lv_resultado * lv_NumFat
+     lv_NumFat <- lv_NumFat - 1
+     fimenquanto
+     lv_validador <- lv_resultado - INT(lv_resultado)
     fimenquanto
 
     escreval("O fatorial é: ", lv_resultado:1:2)
