@@ -129,7 +129,7 @@ Inicio
       Leia(c)
 
       delta <- b * b - 4 * a * c
-      EscrevaL("O valor de delta é: ", delta)
+      EscrevaL("O valor de delta é:",delta:1:2)
 
       Se delta < 0 entao
          EscrevaL("Sem raízes reais.")
