@@ -557,15 +557,48 @@ fimfuncao
 //Concatena na ordem digitada duas strings
 funcao f_concatenarString() : real
 var
-lv_res,lv_string1,lv_string2: caracter
+   lv_res,lv_string1,lv_string2: caracter
+   lim,i: inteiro
+   val: logico
 Inicio
+
    escreval("Digite a primeira string: ")
    leia(lv_string1)
+   limpatela
+
+   enquanto (lv_string1 = "") faca
+      escreval("A string está vazia!")
+      escreval("Digite a primeira string: ")
+      leia(lv_string1)
+      limpatela
+   fimenquanto
+
    escreval("Digite a segunda string: ")
    leia(lv_string2)
+   limpatela
+
+   enquanto (lv_string2 = "") faca
+      escreval("A string está vazia!")
+      escreval("Digite a segunda string: ")
+      leia(lv_string2)
+      limpatela
+   fimenquanto
+
    lv_res <- lv_string1 + lv_string2
-   escreval("Resultado da combinação de Strings: ")
-   escreval(lv_res)
+
+   para i de 1 até 1 faca
+      val<- verdadeiro
+      lim <- compr(lv_res)
+      se lim > 255 entao
+         val<- falso
+         escreval("Resultado maior que 255")
+      senao
+         escreval("Resultado: ",lv_res)
+         escreval("")
+         escreval("")
+         escreval("")
+      fimse
+   fimpara
    retorne 0
 
 fimfuncao
