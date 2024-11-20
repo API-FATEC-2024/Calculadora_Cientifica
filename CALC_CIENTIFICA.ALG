@@ -458,15 +458,37 @@ funcao f_calculoBinarioToHexacimal():real
 	retorne 0
 fimfuncao
 
-
+ // FUNCAO HEXADECIMAL PRA BINARIO
 funcao f_calculoHexadecimalToBinario():real
   var
-    lv_digitoHex, lv_numHex, lv_numBin, lv_digitoEmBin: caracter
-    lv_posicao, lv_tamanho: inteiro
+    lv_digitoHex, lv_numHex, lv_numBin, lv_digitoEmBin,lv_aux: caracter
+    lv_posicao,lv_tam,i, lv_tamanho: inteiro
+    lv_ehValido: logico
   inicio
 
-    Escreval("Digite o número Hexadecimal: ")
-    leia(lv_numHex)
+
+    repita
+          Escreval("Digite o número Hexadecimal e letras maisculas: ")
+          leia(lv_numHex)
+          // Inicializa a variável de validação
+          lv_ehValido <- verdadeiro
+          // Verifica cada caractere da string
+          se   lv_numHex = "" entao
+                lv_ehValido<- falso
+          fimse
+
+          lv_tam<- compr(lv_numHex)
+          para i <- 1 ate lv_tam faca
+                 lv_aux <- copia(lv_numHex,i,1)
+                 //escreval("char: ", aux)
+                 se (lv_aux <> "0") e (lv_aux <> "1") e (lv_aux <> "2") e (lv_aux <> "3") e (lv_aux <> "4") e (lv_aux <> "5") e (lv_aux <> "6") e (lv_aux <> "7") e (lv_aux <> "8") e (lv_aux <> "9") e (lv_aux <> "A") e (lv_aux <> "B") e (lv_aux <> "C") e (lv_aux <> "D") e (lv_aux <> "F")  entao
+                    lv_ehValido<- falso
+                 fimse
+          fimpara
+          se (nao lv_ehValido) entao
+            escreval("Número inválido! Insira apenas números Hexadecimais e letras maisculas")
+          fimse
+    ate (lv_ehValido)
     lv_tamanho <- compr(lv_numHex)
     lv_numBin <- ""
     lv_posicao <- 1
@@ -515,11 +537,22 @@ funcao f_calculoHexadecimalToBinario():real
       lv_tamanho <- lv_tamanho - 1
       lv_posicao <- lv_posicao + 1
     fimenquanto
-
+    // retirar os 0 as esquerdas do numero
+    lv_aux <- copia(lv_numBin,1,1)
+    lv_tam<- compr(lv_numBin)
+    enquanto (lv_aux = "0") e (lv_tam > 1)  faca
+        // escreval("primeiro nuemero:", aux)
+        lv_numBin<- copia(lv_numBin,2,compr(lv_numBin))
+        lv_aux <- copia(lv_numBin,1,1)
+        //para nao apagar caso seja apenas 0
+        lv_tam<- compr(lv_numBin)
+    fimenquanto
     escreval("Resultado da conversão para Binário: ")
     escreval(lv_numBin)
     retorne 0
 fimfuncao
+
+
 
 //Concatena na ordem digitada duas strings
 funcao f_concatenarString() : real
