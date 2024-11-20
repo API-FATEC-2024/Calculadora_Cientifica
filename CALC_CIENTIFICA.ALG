@@ -171,6 +171,7 @@ var
 
 inicio
    //calculo juros simples
+   Escreva ("---Operação de Juros simples---")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
@@ -201,6 +202,7 @@ var
 
 inicio
 //calculo juros composto
+   Escreva("---Operação de Juros Composto---")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
