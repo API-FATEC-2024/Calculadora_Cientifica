@@ -589,9 +589,9 @@ Inicio
    para i de 1 até 1 faca
       val<- verdadeiro
       lim <- compr(lv_res)
-      se lim > 255 entao
+      se lim > 254 entao
          val<- falso
-         escreval("Resultado maior que 255")
+         escreval("Resultado maior que 254, o limite do resultado é de 254 caracteres")
       senao
          escreval("Resultado: ",lv_res)
          escreval("")
