@@ -84,48 +84,56 @@ Funcao f_multiplicacao (): real
 
 funcao f_fatorial(): real
 var
-    lv_resultado,lv_NumFat,lv_contador,lv_validador: real
+   lv_resultado, lv_NumFat, lv_contador, lv_validador: real
+   y, x: caracter
+   valido: logico
+   i, tam: inteiro
 
 inicio
-    Escreval("Digite um número: ")
-    leia(lv_NumFat)
+   repita
+      valido <- verdadeiro
 
-    enquanto lv_NumFat < 0 faca
-        Escreval("Digite um numero maior ou igual a zero!")
-        leia(lv_NumFat)
-    fimenquanto
+      escreval("Digite um número inteiro: ")
+      leia(x)
 
-    enquanto lv_NumFat >= 171 faca
-        Escreval("ERRO: Digite um numero menor, valor limite excedido")
-        leia(lv_NumFat)
-    fimenquanto
+      tam <- compr(x)
+      para i <- 1 ate tam faca
+         y <- copia(x, i, 1)
+         se (y <> "0") e (y <> "1") e (y <> "2") e (y <> "3") e (y <> "4") e (y <> "5") e (y <> "6") e (y <> "7") e (y <> "8") e (y <> "9") entao
+            valido <- falso
+         fimse
+      fimpara
+      se (nao valido) entao
+         escreval("ERRO: Digite apenas números inteiros.")
+      fimse
 
-    lv_resultado <- 1
-    lv_contador <- 1
+   ate (valido)
 
-    enquanto lv_NumFat > lv_contador faca
-        lv_resultado <- lv_resultado * lv_NumFat
-        lv_NumFat <- lv_NumFat - 1
-    fimenquanto
+   lv_NumFat <- caracpnum(x)
 
-    lv_validador <- lv_resultado - INT(lv_resultado)
+   enquanto lv_NumFat < 0 faca
+      escreval("ERRO: Digite um numero maior ou igual a 0")
+      leia(x)
+      lv_NumFat <- caracpnum(x)
+   fimenquanto
 
-    enquanto lv_validador > 0 faca
-    EScreval("ERRO: digite um numero inteiro")
-    leia(lv_NumFat)
-    lv_resultado <-1
-    lv_contador <-1
+   enquanto lv_NumFat >= 171 faca
+      escreval("ERRO: Digite um numero menor, valor limite excedido")
+      leia(x)
+      lv_NumFat <- caracpnum(x)
+   fimenquanto
 
-    enquanto lv_NumFat > 1 faca
-     lv_resultado <- lv_resultado * lv_NumFat
-     lv_NumFat <- lv_NumFat - 1
-     fimenquanto
-     lv_validador <- lv_resultado - INT(lv_resultado)
-    fimenquanto
+   lv_resultado <- 1
+   lv_contador <- 1
 
-    escreval("O fatorial é: ", lv_resultado:1:2)
+   enquanto lv_NumFat >= lv_contador faca
+      lv_resultado <- lv_resultado * lv_contador
+      lv_contador <- lv_contador + 1
+   fimenquanto
 
-    retorne 0
+   escreval("O fatorial é: ", lv_resultado:1:2)
+
+   retorne 0
 fimfuncao
 
 funcao f_segundoGrau():real
