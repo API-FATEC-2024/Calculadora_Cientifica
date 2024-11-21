@@ -279,48 +279,71 @@ fimfuncao
 //FUNÇÕES OCTAIS
 //FUNCAO OCTAL PRA BINARIO
 funcao f_calculoOctaltoBinario() : real
- var
-    lv_digitoOct, lv_numOCt, lv_numBin, lv_digitoEmBin: caracter
-    lv_posicao, lv_tamanho: inteiro
- inicio
+var
+   lv_digitoOct, lv_numOct, lv_numBin, lv_digitoEmBin, esq: caracter
+   lv_posicao, lv_tamanho: inteiro
+   lv_valido: logico
 
-    Escreval("Digite o número Octal: ")
-    leia(lv_numOct)
-    lv_tamanho <- compr(lv_numOct)
-    lv_numBin <- ""
-    lv_posicao <- 1
+inicio
+   repita
+      Escreval("Digite o número Octal: ")
+      leia(lv_numOct)
 
-    enquanto lv_tamanho > 0 faca
-      lv_digitoOct <- copia(lv_numOct:lv_posicao:1)
+      // Verifica se é negativo
+      esq <- copia(lv_numOct, 1,1)
+      se esq = "-" entao
+         escreval("Erro: Valores negativos não são permitidos!")
+         lv_valido <- falso
+      senao
+         // Verifica se contém apenas dígitos octais (0 a 7)
+         lv_valido <- verdadeiro
+         para lv_posicao de 1 ate compr(lv_numOct) faca
+            lv_digitoOct <- copia(lv_numOct, lv_posicao, 1)
+            se (lv_digitoOct < "0") ou (lv_digitoOct > "7") entao
+               escreval("Erro: O número contém caracteres inválidos!")
+               lv_valido <- falso
+               interrompa
+            fimse
+         fimpara
+      fimse
+   ate lv_valido
+
+   // Realiza a conversão
+   lv_tamanho <- compr(lv_numOct)
+   lv_numBin <- ""
+   lv_posicao <- 1
+
+   enquanto lv_tamanho > 0 faca
+      lv_digitoOct <- copia(lv_numOct, lv_posicao, 1)
 
       escolha lv_digitoOct
          caso "0"
-           lv_digitoEmBin <- "000"
+            lv_digitoEmBin <- "000"
          caso "1"
-           lv_digitoEmBin <- "001"
+            lv_digitoEmBin <- "001"
          caso "2"
-           lv_digitoEmBin <- "010"
+            lv_digitoEmBin <- "010"
          caso "3"
-           lv_digitoEmBin <- "011"
+            lv_digitoEmBin <- "011"
          caso "4"
-           lv_digitoEmBin <- "100"
+            lv_digitoEmBin <- "100"
          caso "5"
-           lv_digitoEmBin <- "101"
+            lv_digitoEmBin <- "101"
          caso "6"
-           lv_digitoEmBin <- "110"
+            lv_digitoEmBin <- "110"
          caso "7"
-           lv_digitoEmBin <- "111"
+            lv_digitoEmBin <- "111"
+         fimescolha
 
-      fimescolha
-
-      // Adiciona o dígito hexadecimal ao resultado final e atualiza contadores
-      lv_numBin <-  lv_numBin + lv_digitoEmBin
+      // Adiciona o dígito binário ao resultado final
+      lv_numBin <- lv_numBin + lv_digitoEmBin
       lv_tamanho <- lv_tamanho - 1
       lv_posicao <- lv_posicao + 1
-    fimenquanto
+   fimenquanto
 
-    escreval("Resultado da conversão para Binário: ")
-    escreval(lv_numBin)
+   escreval("Resultado da conversão para Binário: ")
+   escreval(lv_numBin)
+
     retorne 0
 fimfuncao
 
