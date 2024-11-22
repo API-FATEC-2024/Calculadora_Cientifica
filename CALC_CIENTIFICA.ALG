@@ -653,7 +653,6 @@ inicio
 
       escreval("Selecione uma operacao,digite sua escolha")
 
-
       escreval("1-Soma")
       escreval("2-Subtracao")
       escreval("3-Multiplicacao")
@@ -661,15 +660,14 @@ inicio
       escreval("5-Fatorial")
       escreval("6-Juros Simples")
       escreval("7-Juros Compostos")
-      escreval("8-Conversao B16 para B2")
-      escreval("9-Conversao B2 para B16")
-      escreval("10-Concatenacao de strings")
-      escreval("11-Conversao B10 para B2")
-      escreval("12-Conversao B2 para B10")
-      escreval("13-Conversao B8 para B2")
-      escreval("14-Conversao B2 para 8")
-      escreval("15-Resolução de equação do segundo grau")
-
+      escreval("8-Resolução de equação do segundo grau")
+      escreval("9-Concatenacao de strings")
+      escreval("10-Conversao B16 para B2")
+      escreval("11-Conversao B2 para B16")
+      escreval("12-Conversao B10 para B2")
+      escreval("13-Conversao B2 para B10")
+      escreval("14-Conversao B8 para B2")
+      escreval("15-Conversao B2 para 8")
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
@@ -690,21 +688,21 @@ inicio
       caso 7
          lv_retorno <- f_jurosComposto ()
       caso 8
-         lv_retorno <- f_calculoHexadecimalToBinario()
-      caso 9
-         lv_retorno <- f_calculoBinarioToHexacimal()
-      caso 10
-         lv_retorno <- f_concatenarString()
-      caso 11
-         lv_retorno <- f_calculoDecimalToBinario()
-      caso 12
-         lv_retorno <- f_calculoBinarioToDecimal()
-      caso 13
-         lv_retorno <- f_calculoOctaltoBinario()
-      caso 14
-         lv_retorno <- f_calculoBinariotoOctal()
-      caso 15
 	 lv_retorno <- f_segundoGrau()
+      caso 9
+         lv_retorno <- f_concatenarString()
+      caso 10
+         lv_retorno <- f_calculoHexadecimalToBinario()
+      caso 11
+	 lv_retorno <- f_calculoBinarioToHexacimal()
+      caso 12
+	 lv_retorno <- f_calculoDecimalToBinario()
+      caso 13
+	 lv_retorno <- f_calculoBinarioToDecimal()
+      caso 14
+	 lv_retorno <- f_calculoOctaltoBinario()
+      caso 15
+	 lv_retorno <- f_calculoBinariotoOctal()
       fimescolha
 
 se lv_item <> 0 entao
