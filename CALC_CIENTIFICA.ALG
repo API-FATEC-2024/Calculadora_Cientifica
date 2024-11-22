@@ -9,7 +9,7 @@ Algoritmo "Calc_cientifica"
 Var // DECLARACAO DAS FUNCOES/PROCEDIMENTOS AQUI
 gv_retorno:inteiro
 
- função f_calculoSoma() : real
+ funcao f_calculoSoma() : real
  var
  lv_N1,lv_N2: real
  lv_resultado : real
@@ -19,12 +19,16 @@ gv_retorno:inteiro
    escreva ("Escreva o segundo número: ")
    leia (lv_N2)
    lv_resultado <- lv_N1+lv_N2
+ se lv_resultado > 1000000000000000 então
+   escreval ("Limite da soma ultrapassado")
+   senão
    escreva ("O resultado é: ")
    escreval (lv_resultado:1:2)
+ fimse
    retorne 0
  fimfunção
 
- função f_calculoSubtracao() : real
+ funcao f_calculoSubtracao() : real
  var
  lv_M1,lv_M2: real
  lv_resultado : real
@@ -34,8 +38,12 @@ gv_retorno:inteiro
    escreva ("Escreva o segundo número: ")
    leia (lv_M2)
    lv_resultado <- lv_M1-lv_M2
+se lv_M1 > 1000000000000000 entao
+   escreval ("Limite da subtração ultrapassado")
+   senão
    escreva ("O resultado é: ")
    escreval (lv_resultado:1:2)
+fimse
    retorne 0
 fimfunção
 
@@ -76,51 +84,90 @@ Funcao f_multiplicacao (): real
 
 funcao f_fatorial(): real
 var
-    lv_resultado,lv_NumFat,lv_contador: real
+   lv_resultado, lv_NumFat, lv_contador, lv_validador: real
+   y, x: caracter
+   valido: logico
+   i, tam: inteiro
 
 inicio
-    Escreval("Digite um número: ")
-    leia(lv_NumFat)
+   repita
+      valido <- verdadeiro
 
-    enquanto lv_NumFat < 0 faca
-        Escreval("Digite um numero maior ou igual a zero!")
-        leia(lv_NumFat)
-    fimenquanto
+      escreval("Digite um número inteiro: ")
+      leia(x)
 
-    lv_resultado <- 1
-    lv_contador <- 1
+      tam <- compr(x)
+      para i <- 1 ate tam faca
+         y <- copia(x, i, 1)
+         se (y <> "0") e (y <> "1") e (y <> "2") e (y <> "3") e (y <> "4") e (y <> "5") e (y <> "6") e (y <> "7") e (y <> "8") e (y <> "9") entao
+            valido <- falso
+         fimse
+      fimpara
+      se (nao valido) entao
+         escreval("ERRO: Digite apenas números inteiros.")
+      fimse
 
-    enquanto lv_NumFat > lv_contador faca
-        lv_resultado <- lv_resultado * lv_NumFat
-        lv_NumFat <- lv_NumFat - 1
-    fimenquanto
+   ate (valido)
 
-    escreval("O fatorial é: ", lv_resultado:1:2)
+   lv_NumFat <- caracpnum(x)
 
-    retorne 0
+   enquanto lv_NumFat < 0 faca
+      escreval("ERRO: Digite um numero maior ou igual a 0")
+      leia(x)
+      lv_NumFat <- caracpnum(x)
+   fimenquanto
+
+   enquanto lv_NumFat >= 171 faca
+      escreval("ERRO: Digite um numero menor, valor limite excedido")
+      leia(x)
+      lv_NumFat <- caracpnum(x)
+   fimenquanto
+
+   lv_resultado <- 1
+   lv_contador <- 1
+
+   enquanto lv_NumFat >= lv_contador faca
+      lv_resultado <- lv_resultado * lv_contador
+      lv_contador <- lv_contador + 1
+   fimenquanto
+
+   escreval("O fatorial é: ", lv_resultado:1:2)
+
+   retorne 0
 fimfuncao
 
 funcao f_segundoGrau():real
- var
-  a,b,c,delta,x1,x2:real
- inicio
-  leia(a)
-  leia(b)
-  leia(c)
-  delta <-0
-  x1<-0
-  x2<-0
-  delta <- b*b-4*(a)*(c)
-  escreval ("O delta é:  ", delta)
-  se delta >=0 então
-    x1<-(-b+(delta)^(1/2))/(2*a)
-    x2<-(-b-(delta)^(1/2))/(2*a)
-    escreval ("A raiz de x1 é:  ", x1:1:2)
-    escreval ("A raiz de x2 é:  ", x2:1:2)
-  senão
-    escreva ("Não possui raiz real")
-  Fimse
-  retorne 0
+ Var
+   a, b, c, delta, raiz1, raiz2: real
+
+Inicio
+   EscrevaL("Digite o coeficiente a: ")
+   Leia(a)
+   Se a = 0 entao
+      EscrevaL("Não é uma equação do segundo grau.")
+   Senao
+      EscrevaL("Digite o coeficiente b: ")
+      Leia(b)
+      EscrevaL("Digite o coeficiente c: ")
+      Leia(c)
+
+      delta <- b * b - 4 * a * c
+      EscrevaL("O valor de delta é:",delta:1:2)
+
+      Se delta < 0 entao
+         EscrevaL("Sem raízes reais.")
+      Senao
+         Se delta = 0 entao
+            raiz1 <- -b / (2 * a)
+            EscrevaL("Raiz única: ", raiz1)
+         Senao
+            raiz1 <- (-b + raizQ(delta)) / (2 * a)
+            raiz2 <- (-b - raizQ(delta)) / (2 * a)
+            EscrevaL("As raízes são ", "x1:",raiz1:1:2, " e ", "x2:",raiz2:1:2)
+         FimSe
+      FimSe
+   FimSe
+   retorne 0
 Fimfuncao
 
 funcao f_calculoJuros (): real
@@ -132,6 +179,7 @@ var
 
 inicio
    //calculo juros simples
+   Escreva ("---Operação de Juros simples---")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
@@ -162,6 +210,7 @@ var
 
 inicio
 //calculo juros composto
+   Escreva("---Operação de Juros Composto---")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
@@ -230,48 +279,71 @@ fimfuncao
 //FUNÇÕES OCTAIS
 //FUNCAO OCTAL PRA BINARIO
 funcao f_calculoOctaltoBinario() : real
- var
-    lv_digitoOct, lv_numOCt, lv_numBin, lv_digitoEmBin: caracter
-    lv_posicao, lv_tamanho: inteiro
- inicio
+var
+   lv_digitoOct, lv_numOct, lv_numBin, lv_digitoEmBin, esq: caracter
+   lv_posicao, lv_tamanho: inteiro
+   lv_valido: logico
 
-    Escreval("Digite o número Octal: ")
-    leia(lv_numOct)
-    lv_tamanho <- compr(lv_numOct)
-    lv_numBin <- ""
-    lv_posicao <- 1
+inicio
+   repita
+      Escreval("Digite o número Octal: ")
+      leia(lv_numOct)
 
-    enquanto lv_tamanho > 0 faca
-      lv_digitoOct <- copia(lv_numOct:lv_posicao:1)
+      // Verifica se é negativo
+      esq <- copia(lv_numOct, 1,1)
+      se esq = "-" entao
+         escreval("Erro: Valores negativos não são permitidos!")
+         lv_valido <- falso
+      senao
+         // Verifica se contém apenas dígitos octais (0 a 7)
+         lv_valido <- verdadeiro
+         para lv_posicao de 1 ate compr(lv_numOct) faca
+            lv_digitoOct <- copia(lv_numOct, lv_posicao, 1)
+            se (lv_digitoOct < "0") ou (lv_digitoOct > "7") entao
+               escreval("Erro: O número contém caracteres inválidos!")
+               lv_valido <- falso
+               interrompa
+            fimse
+         fimpara
+      fimse
+   ate lv_valido
+
+   // Realiza a conversão
+   lv_tamanho <- compr(lv_numOct)
+   lv_numBin <- ""
+   lv_posicao <- 1
+
+   enquanto lv_tamanho > 0 faca
+      lv_digitoOct <- copia(lv_numOct, lv_posicao, 1)
 
       escolha lv_digitoOct
          caso "0"
-           lv_digitoEmBin <- "000"
+            lv_digitoEmBin <- "000"
          caso "1"
-           lv_digitoEmBin <- "001"
+            lv_digitoEmBin <- "001"
          caso "2"
-           lv_digitoEmBin <- "010"
+            lv_digitoEmBin <- "010"
          caso "3"
-           lv_digitoEmBin <- "011"
+            lv_digitoEmBin <- "011"
          caso "4"
-           lv_digitoEmBin <- "100"
+            lv_digitoEmBin <- "100"
          caso "5"
-           lv_digitoEmBin <- "101"
+            lv_digitoEmBin <- "101"
          caso "6"
-           lv_digitoEmBin <- "110"
+            lv_digitoEmBin <- "110"
          caso "7"
-           lv_digitoEmBin <- "111"
+            lv_digitoEmBin <- "111"
+         fimescolha
 
-      fimescolha
-
-      // Adiciona o dígito hexadecimal ao resultado final e atualiza contadores
-      lv_numBin <-  lv_numBin + lv_digitoEmBin
+      // Adiciona o dígito binário ao resultado final
+      lv_numBin <- lv_numBin + lv_digitoEmBin
       lv_tamanho <- lv_tamanho - 1
       lv_posicao <- lv_posicao + 1
-    fimenquanto
+   fimenquanto
 
-    escreval("Resultado da conversão para Binário: ")
-    escreval(lv_numBin)
+   escreval("Resultado da conversão para Binário: ")
+   escreval(lv_numBin)
+
     retorne 0
 fimfuncao
 
@@ -328,13 +400,35 @@ fimfuncao
 // FUNCAO BINARIO PRA HEXADECIMAL
 funcao f_calculoBinarioToHexacimal():real
   var
-    lv_resto, lv_digitoE, lv_numBin, lv_numHexa: caracter
-    lv_tamNumBin, lv_posicaoDig: inteiro
+    lv_resto, lv_digitoE, lv_numBin, lv_numHexa,aux: caracter
+    lv_tamNumBin,i, lv_posicaoDig: inteiro
+    lv_numBinReal:real
+    lv_ehValido:logico
   inicio
 
     lv_numHexa <- ""
-    Escreval("Digite o número Binário: ")
-    leia(lv_numBin)
+    repita
+          Escreval("Digite o número Binário: ")
+          leia(lv_numBin)
+          // Inicializa a variável de validação
+          lv_ehValido <- verdadeiro
+          // Verifica cada caractere da string
+          se   lv_numBin = "" entao
+                lv_ehValido<- falso
+          fimse
+
+          para i <- 1 ate compr(lv_numBin) faca
+                 aux <- copia(lv_numBin,i,1)
+                 //escreval("char: ", aux)
+                 se (aux <> "1") e (aux <> "0") entao
+                    lv_ehValido<- falso
+                 fimse
+          fimpara
+          
+          se (nao lv_ehValido) entao
+            escreval("Número inválido! Insira apenas números binários (0 ou 1).")
+          fimse
+    ate (lv_ehValido)
     lv_posicaoDig<-1
     lv_tamNumBin <- compr(lv_numBin)
 
@@ -385,21 +479,49 @@ funcao f_calculoBinarioToHexacimal():real
       lv_numHexa <-  lv_numHexa + lv_digitoE
       lv_posicaoDig <- lv_posicaoDig + 4
     fimenquanto
-
+    // retirar os 0 as esquerdas do numero
+    aux <- copia(lv_numHexa,1,1)
+    enquanto aux = "0" faca
+        // escreval("primeiro nuemero:", aux)
+        lv_numHexa<- copia(lv_numHexa,2,compr(lv_numHexa))
+        aux <- copia(lv_numHexa,1,1)
+    fimenquanto
     escreval("Resultado da conversão para lv_numHexadecimal: ")
     escreva(lv_numHexa)
 	retorne 0
 fimfuncao
 
-
+ // FUNCAO HEXADECIMAL PRA BINARIO
 funcao f_calculoHexadecimalToBinario():real
   var
-    lv_digitoHex, lv_numHex, lv_numBin, lv_digitoEmBin: caracter
-    lv_posicao, lv_tamanho: inteiro
+    lv_digitoHex, lv_numHex, lv_numBin, lv_digitoEmBin,lv_aux: caracter
+    lv_posicao,lv_tam,i, lv_tamanho: inteiro
+    lv_ehValido: logico
   inicio
 
-    Escreval("Digite o número Hexadecimal: ")
-    leia(lv_numHex)
+
+    repita
+          Escreval("Digite o número Hexadecimal e letras maisculas: ")
+          leia(lv_numHex)
+          // Inicializa a variável de validação
+          lv_ehValido <- verdadeiro
+          // Verifica cada caractere da string
+          se   lv_numHex = "" entao
+                lv_ehValido<- falso
+          fimse
+
+          lv_tam<- compr(lv_numHex)
+          para i <- 1 ate lv_tam faca
+                 lv_aux <- copia(lv_numHex,i,1)
+                 //escreval("char: ", aux)
+                 se (lv_aux <> "0") e (lv_aux <> "1") e (lv_aux <> "2") e (lv_aux <> "3") e (lv_aux <> "4") e (lv_aux <> "5") e (lv_aux <> "6") e (lv_aux <> "7") e (lv_aux <> "8") e (lv_aux <> "9") e (lv_aux <> "A") e (lv_aux <> "B") e (lv_aux <> "C") e (lv_aux <> "D") e (lv_aux <> "F")  entao
+                    lv_ehValido<- falso
+                 fimse
+          fimpara
+          se (nao lv_ehValido) entao
+            escreval("Número inválido! Insira apenas números Hexadecimais e letras maisculas")
+          fimse
+    ate (lv_ehValido)
     lv_tamanho <- compr(lv_numHex)
     lv_numBin <- ""
     lv_posicao <- 1
@@ -448,24 +570,68 @@ funcao f_calculoHexadecimalToBinario():real
       lv_tamanho <- lv_tamanho - 1
       lv_posicao <- lv_posicao + 1
     fimenquanto
-
+    // retirar os 0 as esquerdas do numero
+    lv_aux <- copia(lv_numBin,1,1)
+    lv_tam<- compr(lv_numBin)
+    enquanto (lv_aux = "0") e (lv_tam > 1)  faca
+        // escreval("primeiro nuemero:", aux)
+        lv_numBin<- copia(lv_numBin,2,compr(lv_numBin))
+        lv_aux <- copia(lv_numBin,1,1)
+        //para nao apagar caso seja apenas 0
+        lv_tam<- compr(lv_numBin)
+    fimenquanto
     escreval("Resultado da conversão para Binário: ")
     escreval(lv_numBin)
     retorne 0
 fimfuncao
 
+
+
 //Concatena na ordem digitada duas strings
 funcao f_concatenarString() : real
 var
-lv_res,lv_string1,lv_string2: caracter
+   lv_res,lv_string1,lv_string2: caracter
+   lim,i: inteiro
+   val: logico
 Inicio
+
    escreval("Digite a primeira string: ")
    leia(lv_string1)
+   limpatela
+
+   enquanto (lv_string1 = "") faca
+      escreval("A string está vazia!")
+      escreval("Digite a primeira string: ")
+      leia(lv_string1)
+      limpatela
+   fimenquanto
+
    escreval("Digite a segunda string: ")
    leia(lv_string2)
+   limpatela
+
+   enquanto (lv_string2 = "") faca
+      escreval("A string está vazia!")
+      escreval("Digite a segunda string: ")
+      leia(lv_string2)
+      limpatela
+   fimenquanto
+
    lv_res <- lv_string1 + lv_string2
-   escreval("Resultado da combinação de Strings: ")
-   escreval(lv_res)
+
+   para i de 1 até 1 faca
+      val<- verdadeiro
+      lim <- compr(lv_res)
+      se lim > 254 entao
+         val<- falso
+         escreval("Resultado maior que 254, o limite do resultado é de 254 caracteres")
+      senao
+         escreval("Resultado: ",lv_res)
+         escreval("")
+         escreval("")
+         escreval("")
+      fimse
+   fimpara
    retorne 0
 
 fimfuncao
@@ -500,6 +666,8 @@ inicio
       escreval("12-Conversao B2 para B10")
       escreval("13-Conversao B8 para B2")
       escreval("14-Conversao B2 para 8")
+      escreval("15-Resolução de equação do segundo grau")
+
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
@@ -533,6 +701,8 @@ inicio
          lv_retorno <- f_calculoOctaltoBinario()
       caso 14
          lv_retorno <- f_calculoBinariotoOctal()
+      caso 15
+	 lv_retorno <- f_segundoGrau()
       fimescolha
 
 se lv_item <> 0 entao
