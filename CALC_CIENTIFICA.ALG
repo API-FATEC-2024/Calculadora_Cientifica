@@ -503,7 +503,7 @@ funcao f_calculoHexadecimalToBinario():real
 
 
     repita
-          Escreval("Digite o número Hexadecimal e letras maisculas: ")
+          Escreval("Insira um numero hexadecimal (A-F, 0-9):")
           leia(lv_numHex)
           // Inicializa a variável de validação
           lv_ehValido <- verdadeiro
@@ -521,7 +521,7 @@ funcao f_calculoHexadecimalToBinario():real
                  fimse
           fimpara
           se (nao lv_ehValido) entao
-            escreval("Número inválido! Insira apenas números Hexadecimais e letras maisculas")
+            escreval("Número inválido! ")
           fimse
     ate (lv_ehValido)
     lv_tamanho <- compr(lv_numHex)
