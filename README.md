@@ -1,11 +1,3 @@
-Repositório para o projeto da calculadora cientifica. 
-
-
-Por favor sigam as instruções do card de GITHUB quando forem fazer as alterações.
-
-
-User stories: 
-https://github.com/orgs/API-FATEC-2024/projects/1
 
 # Contexto e Objetivo do Projeto 🎯
 
@@ -21,6 +13,17 @@ Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnolog
 - `Funcionalidade 6`: Conversão de número Binário para Hexadecimal vice e versa
 - `Funcionalidade 7`: Concatenação de 2 strings
 
+# User Story
+
+Acesse o User Story:
+  <a href="https://github.com/orgs/API-FATEC-2024/projects/1" target="_blank">
+    <button style="background-color:#0078D7; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px;">
+      Clique Aqui
+    </button>
+  </a>
+</div>
+
+
 # Cronograma 📅 
 
 O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresentação na Feira de Soluções, para o gerenciamento e acompanhamento das entregas foi utilizado o próprio Github.
@@ -32,12 +35,12 @@ O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresenta
 # Autores 📃
 | Foto | Aluno | Função                                                                                                  |
 |-|-|-|
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Abimael%20Foto.jpg" alt="Abimael" width="250"> | Abimael | Product Owner |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Volotao%20Foto.jpg" alt="Matheus V" width="250"> | Matheus Santos Volotão | Scrum Master |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Bruna%20Foto.jpg" alt="Bruna" width="250"> | Bruna Camille Barbosa de Oliveira | Developer Team |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Caue%20Foto.jpg" alt="Caue" width="250"> | Cauê Gandini de Almeida | Developer Team |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Eduardo%20Foto.jpg" alt="Eduardo" width="250"> | Eduardo | Developer Team |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Guilherme%20Foto.jpg" alt="Guilherme" width="250"> | Guilherme Gomos Crisostomo | Developer Team |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Joao%20Foto.jpg" alt="João" width="250"> | João Gabriel Fernandes de S. Silva| Developer Team | 
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Souza%20Foto.jpg" alt="Matheus S" width="250"> | Matheus Sousa | Developer Team |
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Raissa%20Foto.jpg" alt="Raissa" width="250"> | Raissa | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Abimael%20Foto.jpg" alt="Abimael" width="250"> | <div align="center"> Abimael | Product Owner |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Volotao%20Foto.jpg" alt="Matheus V" width="250"> | <div align="center"> Matheus Santos Volotão | Scrum Master |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Bruna%20Foto.jpg" alt="Bruna" width="250"> |<div align="center"> Bruna Camille Barbosa de Oliveira | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Caue%20Foto.jpg" alt="Caue" width="250"> |<div align="center"> Cauê Gandini de Almeida | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Eduardo%20Foto.jpg" alt="Eduardo" width="250"> | <div align="center"> Eduardo Dias Florentino | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Guilherme%20Foto.jpg" alt="Guilherme" width="250"> | <div align="center"> Guilherme Gomos Crisostomo | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Joao%20Foto.jpg" alt="João" width="250"> | <div align="center"> João Gabriel Fernandes de S. Silva| Developer Team | 
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Souza%20Foto.jpg" alt="Matheus S" width="250"> | <div align="center"> Matheus de Souza Santos | Developer Team |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Raissa%20Foto.jpg" alt="Raissa" width="250"> | <div align="center"> Raissa Matias de Jesus | Developer Team |
