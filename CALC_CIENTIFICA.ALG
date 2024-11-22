@@ -401,7 +401,7 @@ fimfuncao
 funcao f_calculoBinarioToHexacimal():real
   var
     lv_resto, lv_digitoE, lv_numBin, lv_numHexa,aux: caracter
-    lv_tamNumBin,i, lv_posicaoDig: inteiro
+    lv_tamNumBin,i,tam, lv_posicaoDig: inteiro
     lv_numBinReal:real
     lv_ehValido:logico
   inicio
@@ -424,7 +424,7 @@ funcao f_calculoBinarioToHexacimal():real
                     lv_ehValido<- falso
                  fimse
           fimpara
-          
+
           se (nao lv_ehValido) entao
             escreval("Número inválido! Insira apenas números binários (0 ou 1).")
           fimse
@@ -481,13 +481,15 @@ funcao f_calculoBinarioToHexacimal():real
     fimenquanto
     // retirar os 0 as esquerdas do numero
     aux <- copia(lv_numHexa,1,1)
-    enquanto aux = "0" faca
+    tam<-compr(lv_numHexa)
+    enquanto (aux = "0") e (tam > 1) faca
         // escreval("primeiro nuemero:", aux)
         lv_numHexa<- copia(lv_numHexa,2,compr(lv_numHexa))
         aux <- copia(lv_numHexa,1,1)
+        tam<-compr(lv_numHexa)
     fimenquanto
-    escreval("Resultado da conversão para lv_numHexadecimal: ")
-    escreva(lv_numHexa)
+    escreval("Resultado da conversão para Hexadecimal: ")
+    escreval(lv_numHexa)
 	retorne 0
 fimfuncao
 
