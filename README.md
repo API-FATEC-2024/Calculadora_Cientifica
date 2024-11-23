@@ -32,10 +32,26 @@ O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresenta
 <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Sprint%20Final.png" alt="Sprint" width="600">
 </div>
 
+# Demonstração das Funções
+
+## Soma
+![Teste soma](https://github.com/user-attachments/assets/97dbcf87-2025-4993-9ea9-02d2f3c79545)
+
+## Subtração
+![teste subtração](https://github.com/user-attachments/assets/1238da57-1c8b-4890-93e0-d59a602f7888)
+
+## Multiplicação
+![teste multiplicação](https://github.com/user-attachments/assets/73ca70be-a5ef-4ed6-9fb9-a09280c94814)
+
+
+## Divisão
+![teste divisão](https://github.com/user-attachments/assets/a83b6df9-6dc3-4f34-ab50-8823615eefa7)
+
+
 # Autores 📃
 | Foto | Aluno | Função                                                                                                  |
 |-|-|-|
-| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Abimael%20Foto.jpg" alt="Abimael" width="250"> | <div align="center"> Abimael | Product Owner |
+| <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Abimael%20Foto.jpg" alt="Abimael" width="250"> | <div align="center"> Abimael Souza dos Santos | Product Owner |
 | <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Matheus%20Volotao%20Foto.jpg" alt="Matheus V" width="250"> | <div align="center"> Matheus Santos Volotão | Scrum Master |
 | <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Bruna%20Foto.jpg" alt="Bruna" width="250"> |<div align="center"> Bruna Camille Barbosa de Oliveira | Developer Team |
 | <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Caue%20Foto.jpg" alt="Caue" width="250"> |<div align="center"> Cauê Gandini de Almeida | Developer Team |
