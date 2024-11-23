@@ -90,38 +90,42 @@ var
    i, tam: inteiro
 
 inicio
+   escreval("Digite um número inteiro: ")
+   leia(x)
+   
    repita
-      valido <- verdadeiro
-
-      escreval("Digite um número inteiro: ")
-      leia(x)
-
+   
+   valido <- verdadeiro
+   
       tam <- compr(x)
       para i <- 1 ate tam faca
          y <- copia(x, i, 1)
          se (y <> "0") e (y <> "1") e (y <> "2") e (y <> "3") e (y <> "4") e (y <> "5") e (y <> "6") e (y <> "7") e (y <> "8") e (y <> "9") entao
             valido <- falso
+         senao
          fimse
       fimpara
       se (nao valido) entao
          escreval("ERRO: Digite apenas números inteiros.")
+         leia(x)
       fimse
 
-   ate (valido)
-
+   enquanto x = "" faca
+      valido <- falso
+      escreval("ERRO: Digite um numero: (nenhum valor digitado)")
+      leia(x)
+   fimenquanto
+      
    lv_NumFat <- caracpnum(x)
 
-   enquanto lv_NumFat < 0 faca
-      escreval("ERRO: Digite um numero maior ou igual a 0")
-      leia(x)
-      lv_NumFat <- caracpnum(x)
-   fimenquanto
-
    enquanto lv_NumFat >= 171 faca
+   valido <- falso
       escreval("ERRO: Digite um numero menor, valor limite excedido")
       leia(x)
       lv_NumFat <- caracpnum(x)
    fimenquanto
+
+   ate(valido)
 
    lv_resultado <- 1
    lv_contador <- 1
@@ -130,7 +134,6 @@ inicio
       lv_resultado <- lv_resultado * lv_contador
       lv_contador <- lv_contador + 1
    fimenquanto
-
    escreval("O fatorial é: ", lv_resultado:1:2)
 
    retorne 0
