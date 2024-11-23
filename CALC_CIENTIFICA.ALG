@@ -401,7 +401,7 @@ fimfuncao
 funcao f_calculoBinarioToHexacimal():real
   var
     lv_resto, lv_digitoE, lv_numBin, lv_numHexa,aux: caracter
-    lv_tamNumBin,i, lv_posicaoDig: inteiro
+    lv_tamNumBin,i,tam, lv_posicaoDig: inteiro
     lv_numBinReal:real
     lv_ehValido:logico
   inicio
@@ -424,7 +424,7 @@ funcao f_calculoBinarioToHexacimal():real
                     lv_ehValido<- falso
                  fimse
           fimpara
-          
+
           se (nao lv_ehValido) entao
             escreval("Número inválido! Insira apenas números binários (0 ou 1).")
           fimse
@@ -481,13 +481,15 @@ funcao f_calculoBinarioToHexacimal():real
     fimenquanto
     // retirar os 0 as esquerdas do numero
     aux <- copia(lv_numHexa,1,1)
-    enquanto aux = "0" faca
+    tam<-compr(lv_numHexa)
+    enquanto (aux = "0") e (tam > 1) faca
         // escreval("primeiro nuemero:", aux)
         lv_numHexa<- copia(lv_numHexa,2,compr(lv_numHexa))
         aux <- copia(lv_numHexa,1,1)
+        tam<-compr(lv_numHexa)
     fimenquanto
-    escreval("Resultado da conversão para lv_numHexadecimal: ")
-    escreva(lv_numHexa)
+    escreval("Resultado da conversão para Hexadecimal: ")
+    escreval(lv_numHexa)
 	retorne 0
 fimfuncao
 
@@ -501,7 +503,7 @@ funcao f_calculoHexadecimalToBinario():real
 
 
     repita
-          Escreval("Digite o número Hexadecimal e letras maisculas: ")
+          Escreval("Insira um numero hexadecimal (A-F, 0-9):")
           leia(lv_numHex)
           // Inicializa a variável de validação
           lv_ehValido <- verdadeiro
@@ -519,7 +521,7 @@ funcao f_calculoHexadecimalToBinario():real
                  fimse
           fimpara
           se (nao lv_ehValido) entao
-            escreval("Número inválido! Insira apenas números Hexadecimais e letras maisculas")
+            escreval("Número inválido! ")
           fimse
     ate (lv_ehValido)
     lv_tamanho <- compr(lv_numHex)
@@ -651,7 +653,6 @@ inicio
 
       escreval("Selecione uma operacao,digite sua escolha")
 
-
       escreval("1-Soma")
       escreval("2-Subtracao")
       escreval("3-Multiplicacao")
@@ -659,15 +660,14 @@ inicio
       escreval("5-Fatorial")
       escreval("6-Juros Simples")
       escreval("7-Juros Compostos")
-      escreval("8-Conversao B16 para B2")
-      escreval("9-Conversao B2 para B16")
-      escreval("10-Concatenacao de strings")
-      escreval("11-Conversao B10 para B2")
-      escreval("12-Conversao B2 para B10")
-      escreval("13-Conversao B8 para B2")
-      escreval("14-Conversao B2 para 8")
-      escreval("15-Resolução de equação do segundo grau")
-
+      escreval("8-Resolução de equação do segundo grau")
+      escreval("9-Concatenacao de strings")
+      escreval("10-Conversao B16 para B2")
+      escreval("11-Conversao B2 para B16")
+      escreval("12-Conversao B10 para B2")
+      escreval("13-Conversao B2 para B10")
+      escreval("14-Conversao B8 para B2")
+      escreval("15-Conversao B2 para 8")
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
@@ -688,21 +688,21 @@ inicio
       caso 7
          lv_retorno <- f_jurosComposto ()
       caso 8
-         lv_retorno <- f_calculoHexadecimalToBinario()
-      caso 9
-         lv_retorno <- f_calculoBinarioToHexacimal()
-      caso 10
-         lv_retorno <- f_concatenarString()
-      caso 11
-         lv_retorno <- f_calculoDecimalToBinario()
-      caso 12
-         lv_retorno <- f_calculoBinarioToDecimal()
-      caso 13
-         lv_retorno <- f_calculoOctaltoBinario()
-      caso 14
-         lv_retorno <- f_calculoBinariotoOctal()
-      caso 15
 	 lv_retorno <- f_segundoGrau()
+      caso 9
+         lv_retorno <- f_concatenarString()
+      caso 10
+         lv_retorno <- f_calculoHexadecimalToBinario()
+      caso 11
+	 lv_retorno <- f_calculoBinarioToHexacimal()
+      caso 12
+	 lv_retorno <- f_calculoDecimalToBinario()
+      caso 13
+	 lv_retorno <- f_calculoBinarioToDecimal()
+      caso 14
+	 lv_retorno <- f_calculoOctaltoBinario()
+      caso 15
+	 lv_retorno <- f_calculoBinariotoOctal()
       fimescolha
 
 se lv_item <> 0 entao
