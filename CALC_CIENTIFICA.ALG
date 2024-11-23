@@ -261,7 +261,7 @@ funcao f_calculoDecimalToBinario(): real
 
       se lv_tamanho >= 9  entao
         lv_ehValido <- falso
-        escreval("Numero muito grante")
+        escreval("Numero muito grande! Insira um numero menor que  100000000")
       senao
         se(nao lv_ehValido) entao
                escreval("Entrada inválida! Digite apenas números inteiros positivos.")
