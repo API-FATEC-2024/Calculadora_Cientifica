@@ -289,26 +289,47 @@ fimfuncao
 funcao f_calculoBinarioToDecimal(): real
   var
     lv_numDec, lv_potencia,lv_digito: real
-    lv_numBin: caracter
-    lv_tam:inteiro
+    lv_numBin,aux: caracter
+    lv_tam,i:inteiro
+    lv_ehValido: logico
     //lv_potencia,lv_numBin,lv_digito: inteiro
   inicio
-    Escreval("Digite o numero Binario:")
-    leia(lv_numBin)
+    repita
+          Escreval("Digite o número Binário: ")
+          leia(lv_numBin)
+          // Inicializa a variável de validação
+          lv_ehValido <- verdadeiro
+          // Verifica cada caractere da string
+          se   lv_numBin = "" entao
+                lv_ehValido<- falso
+          fimse
+
+          para i <- 1 ate compr(lv_numBin) faca
+                 aux <- copia(lv_numBin,i,1)
+                 //escreval("char: ", aux)
+                 se (aux <> "1") e (aux <> "0") entao
+                    lv_ehValido<- falso
+                 fimse
+          fimpara
+
+          se (nao lv_ehValido) entao
+            escreval("Número inválido! Insira apenas números binários (0 ou 1).")
+          fimse
+    ate (lv_ehValido)
     lv_tam<- compr(lv_numBin)
     lv_numDec <- 0
     lv_potencia <- 0
 
     enquanto lv_tam > 0 faca
-      lv_digito <- caracpnum( copia(lv_numBin:lv_tam:1) )
+      lv_digito <- caracpnum(copia(lv_numBin,lv_tam,1) )
       lv_numDec <- lv_numDec + lv_digito * 2^lv_potencia
-      lv_numBin <- copia(lv_numBin:1:lv_tam - 1)
+      lv_numBin <- copia(lv_numBin,1,lv_tam - 1)
       lv_potencia <- lv_potencia + 1
       lv_tam<- lv_tam - 1
     fimenquanto
 
-    escreval("Resultado da conversão para numero Decimal: ")
-    escreval(lv_numDec)
+    escreval("Resultado da conversão para numero Decimal:")
+    escreval(lv_numDec:1)
     retorne 0
 fimfuncao
 
