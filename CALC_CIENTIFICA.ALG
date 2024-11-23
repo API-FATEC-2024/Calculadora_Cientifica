@@ -233,16 +233,48 @@ fimfuncao // f_jurosComposto
 //Função que converte um numero decimal pra binario
 funcao f_calculoDecimalToBinario(): real
   var
-    lv_numBin: caracter
-    resto,lv_numDec: inteiro
+    lv_numBin,lv_numDecString,lv_digito: caracter
+    lv_resto,i,lv_numDec,lv_tamanho: inteiro
+    lv_ehValido: logico
   inicio
-    escreval("Digite o numero Decimal:")
-    leia(lv_numDec)
-    lv_numBin<- ""
+  
+    repita
+      escreval("Digite um número decimal:")
+      leia(lv_numDecString)
 
+      // Inicializa a variável de validação
+      lv_ehValido <- verdadeiro
+
+      // Verifica se a entrada está vazia
+      se lv_numDecString = "" entao
+        lv_ehValido <- falso
+      fimse
+
+      // Verifica cada caractere se é um número decimal válido (0-9)
+      lv_tamanho <- compr(lv_numDecString)
+      para i <- 1 ate lv_tamanho faca
+        lv_digito <- copia(lv_numDecString, i, 1)
+        se (lv_digito < "0") ou (lv_digito > "9") entao
+          lv_ehValido <- falso
+        fimse
+      fimpara
+
+      se lv_tamanho >= 9  entao
+        lv_ehValido <- falso
+        escreval("Numero muito grante")
+      senao
+        se(nao lv_ehValido) entao
+               escreval("Entrada inválida! Digite apenas números inteiros positivos.")
+        fimse
+      fimse
+    ate lv_ehValido
+  
+
+    lv_numDec <-  caracpnum(lv_numDecString)
+    lv_numBin<- "0"
     enquanto lv_numDec > 0 faca
-      resto <- lv_numDec%2
-      lv_numBin <- NumpCarac(resto) + lv_numBin
+      lv_resto <- lv_numDec%2
+      lv_numBin <- NumpCarac(lv_resto) + lv_numBin
       lv_numDec <- lv_numDec div 2
     fimenquanto
 
@@ -250,6 +282,7 @@ funcao f_calculoDecimalToBinario(): real
     escreval(lv_numBin)
     retorne 0
 fimfuncao
+
 
 
 //Função que calcula a conversao de binario para decimal
