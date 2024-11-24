@@ -44,7 +44,8 @@ O Projeto foi divido em 4 entregas, sendo 3 Sprints e a entrega final a apresent
 ![teste funçoes 6 a 9](https://github.com/user-attachments/assets/030221bb-e3b4-46b2-923f-66f2101b6afe)
 
 ## Conversões
-![teste funções de 10 a 15](https://github.com/user-attachments/assets/4ebaa842-aaa2-45ea-8e02-0c06b74b61fc)
+![teste funções de 10 a 15 ok](https://github.com/user-attachments/assets/a3983d09-832b-4e78-a7f8-a0d6b836e8a1)
+
 
 # Autores 📃
 | Foto | Aluno | Função                                                                                                  |
