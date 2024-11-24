@@ -1,16 +1,17 @@
 # Contexto e Objetivo do Projeto 🎯
 
-Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnologia Jessen Vidal, desenvolvemos esse projeto de Calculadora Científica com o propósito de desenvolver e aprimorar nossa capacidade de pensamento lógico voltado para a programação. O objetivo principal do projeto é desenvolver uma calculadora que realize as operações matemáticas básica, além de operações como cálculo fatorial, operação de cálculo de função de segundo grau, concersão de bases numéricas, concatenação de 2 strings e função de Juros Simples e Juros Compostos. 
+Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnologia Jessen Vidal, desenvolvemos esse projeto de Calculadora Científica com o propósito de desenvolver e aprimorar nossa capacidade de pensamento lógico voltado para a programação. O objetivo principal do projeto é desenvolver uma calculadora que realize as operações matemáticas básica, além de operações como cálculo fatorial, operação de cálculo de função de segundo grau, conversão de bases numéricas, concatenação de 2 strings e função de Juros Simples e Juros Compostos. 
 
 # Funcionalidades do projeto 🔨
 
-- `Funcionalidade 1`: Calculo das funções básicas: Soma, Subtração, Multiplicação e Divisão
-- `Funcionalidade 2`: Calculo de Fatorial
-- `Funcionalidade 3`: Calculo de Função de Segundo Grau
-- `Funcionalidade 4`: Calculo de Juros Simples e Juros Compostos
+- `Funcionalidade 1`: Cálculo das funções básicas: Soma, Subtração, Multiplicação e Divisão
+- `Funcionalidade 2`: Cálculo de Fatorial
+- `Funcionalidade 3`: Cálculo de Função de Segundo Grau
+- `Funcionalidade 4`: Cálculo de Juros Simples e Juros Compostos
 - `Funcionalidade 5`: Conversão de número Binário para Decimal vice e versa
 - `Funcionalidade 6`: Conversão de número Binário para Hexadecimal vice e versa
-- `Funcionalidade 7`: Concatenação de 2 strings
+- `Funcionalidade 7`: Conversão de número Binário para Octal vice e versa
+- `Funcionalidade 8`: Concatenação de 2 strings
 
 # User Story
 
@@ -24,7 +25,7 @@ Acesse o User Story:
 
 # Metodologias Utilizadas
 
-Para desenvolver o Projeto da Calculadora Científica, foi utilizado o Github tanto para a documentação como para o gerenciamento e acompanhamento de entregas, o VisualG para o desenvolvimento do código, o projeto foi realizado utilizando a Metodologia Àgil.
+Para desenvolver o Projeto da Calculadora Científica, foi utilizado o Github tanto para a documentação como para o gerenciamento e acompanhamento de entregas, o VisualG para o desenvolvimento do código. O projeto foi realizado utilizando a Metodologia Àgil.
 
 # Cronograma 📅 
 
