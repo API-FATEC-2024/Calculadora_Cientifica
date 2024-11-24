@@ -279,12 +279,18 @@ funcao f_calculoDecimalToBinario(): real
   
 
     lv_numDec <-  caracpnum(lv_numDecString)
-    lv_numBin<- "0"
+    lv_numBin<- ""
+    
+    se lv_numDec = 0 entao
+      lv_numBin <- "0"
+    fimse
+    
     enquanto lv_numDec > 0 faca
       lv_resto <- lv_numDec%2
       lv_numBin <- NumpCarac(lv_resto) + lv_numBin
       lv_numDec <- lv_numDec div 2
     fimenquanto
+
 
     escreval("Resultado da conversão para numero binario: ")
     escreval(lv_numBin)
