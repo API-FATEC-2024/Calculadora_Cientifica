@@ -417,52 +417,72 @@ fimfuncao
 
 // FUNCAO BINARIO PRA OCTAL
 funcao f_calculoBinariOtoOctal() : real
-  Var
-    lv_resto, lv_digitoE, lv_numBin, lv_numOctal: caracter
-    lv_tamNumBin, lv_posicaoDig: inteiro
+Var
+  lv_resto, lv_digitoE, lv_numBin, lv_numOctal: caracter
+  lv_tamNumBin, lv_posicaoDig, lv_i: inteiro
+  lv_caractereInvalido: logico
+Inicio
 
-  inicio
-escreval ("Função conversão de número Binário para Octal")
-    lv_numOctal <- ""
-    Escreval("Digite o número Binário: ")
-    leia(lv_numBin)
-    lv_posicaoDig<-1
-    lv_tamNumBin <- compr(lv_numBin)
+  lv_numOctal <- ""
+  lv_caractereInvalido <- FALSO
 
+  Escreval("Digite o número Binário: ")
+  leia(lv_numBin)
+  lv_tamNumBin <- compr(lv_numBin)
 
-    enquanto lv_tamNumBin % 3 <> 0 faca
-      lv_numBin <- "0" + lv_numBin
-      lv_tamNumBin <- lv_tamNumBin + 1
-    fimenquanto
+  // Verificar se existem caracteres inválidos
+  lv_i <- 1
+  enquanto lv_i <= lv_tamNumBin faca
+    se (copia(lv_numBin, lv_i, 1) <> "0") e (copia(lv_numBin, lv_i, 1) <> "1") entao
+      lv_caractereInvalido <- VERDADEIRO
+    fimse
+    lv_i <- lv_i + 1
+  fimenquanto
 
+  se lv_caractereInvalido entao
+    escreval("Erro: O número inserido contém caracteres diferentes de 0 e 1.")
+  fimse
 
-    enquanto lv_posicaoDig <= lv_tamNumBin faca
-      lv_resto <- copia(lv_numBin, lv_posicaoDig, 3)
-      escolha lv_resto
-        caso "000"
-          lv_digitoE <- "0"
-        caso "001"
-          lv_digitoE <- "1"
-        caso "010"
-          lv_digitoE <- "2"
-        caso "011"
-          lv_digitoE <- "3"
-        caso "100"
-          lv_digitoE <- "4"
-        caso "101"
-          lv_digitoE <- "5"
-        caso "110"
-          lv_digitoE <- "6"
-        caso "111"
-          lv_digitoE <- "7"
-      fimescolha
+  // Adicionar zeros à esquerda se necessário
+  enquanto lv_tamNumBin % 3 <> 0 faca
+    lv_numBin <- "0" + lv_numBin
+    lv_tamNumBin <- lv_tamNumBin + 1
+  fimenquanto
 
-      lv_numOctal <-  lv_numOctal + lv_digitoE
-      lv_posicaoDig <- lv_posicaoDig + 3
-    fimenquanto
+  lv_posicaoDig <- 1
 
+  // Conversão para Octal
+  enquanto lv_posicaoDig <= lv_tamNumBin faca
+    lv_resto <- copia(lv_numBin, lv_posicaoDig, 3)
+    escolha lv_resto
+      caso "000"
+        lv_digitoE <- "0"
+      caso "001"
+        lv_digitoE <- "1"
+      caso "010"
+        lv_digitoE <- "2"
+      caso "011"
+        lv_digitoE <- "3"
+      caso "100"
+        lv_digitoE <- "4"
+      caso "101"
+        lv_digitoE <- "5"
+      caso "110"
+        lv_digitoE <- "6"
+      caso "111"
+        lv_digitoE <- "7"
+    fimescolha
+
+    lv_numOctal <- lv_numOctal + lv_digitoE
+    lv_posicaoDig <- lv_posicaoDig + 3
+  fimenquanto
+
+  // Exibir o resultado apenas se não houver erro
+  se não lv_caractereInvalido entao
     escreval("Resultado da conversão para Octal: ")
     escreval(lv_numOctal)
+  fimse
+
 	retorne 0
 fimfuncao
 
