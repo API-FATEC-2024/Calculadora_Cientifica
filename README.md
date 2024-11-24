@@ -1,4 +1,3 @@
-![teste 5 funçoes](https://github.com/user-attachments/assets/3c9c01dd-c690-47c4-ac53-71cce558ebb0)
 # Contexto e Objetivo do Projeto 🎯
 
 Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnologia Jessen Vidal, desenvolvemos esse projeto de Calculadora Científica com o propósito de desenvolver e aprimorar nossa capacidade de pensamento lógico voltado para a programação. O objetivo principal do projeto é desenvolver uma calculadora que realize as operações matemáticas básica, além de operações como cálculo fatorial, operação de cálculo de função de segundo grau, concersão de bases numéricas, concatenação de 2 strings e função de Juros Simples e Juros Compostos. 
@@ -23,11 +22,14 @@ Acesse o User Story:
   </a>
 </div>
 
+# Metodologias Utilizadas
+
+Para desenvolver o Projeto da Calculadora Científica, foi utilizado o Github tanto para a documentação como para o gerenciamento e acompanhamento de entregas, o VisualG para o desenvolvimento do código, o projeto foi realizado utilizando a Metodologia Àgil.
 
 # Cronograma 📅 
 
-O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresentação na Feira de Soluções, para o gerenciamento e acompanhamento das entregas foi utilizado o próprio Github.
-
+O Projeto foi divido em 4 entregas, sendo 3 Sprints e a entrega final a apresentação na Feira de Soluções.
+ 
 <div align="center">
 <img src="https://github.com/API-FATEC-2024/Calculadora_Cientifica/blob/main/Documentacao/images/Sprint%20Final.png" alt="Sprint" width="600">
 </div>
