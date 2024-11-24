@@ -1,4 +1,4 @@
-
+![teste 5 funçoes](https://github.com/user-attachments/assets/3c9c01dd-c690-47c4-ac53-71cce558ebb0)
 # Contexto e Objetivo do Projeto 🎯
 
 Nós, alunos do 1° semestre do curso de Banco de Dados da Faculdade de Tecnologia Jessen Vidal, desenvolvemos esse projeto de Calculadora Científica com o propósito de desenvolver e aprimorar nossa capacidade de pensamento lógico voltado para a programação. O objetivo principal do projeto é desenvolver uma calculadora que realize as operações matemáticas básica, além de operações como cálculo fatorial, operação de cálculo de função de segundo grau, concersão de bases numéricas, concatenação de 2 strings e função de Juros Simples e Juros Compostos. 
@@ -34,19 +34,14 @@ O projeto foi divido em 4 entregas, sendo 3 sprint e a entrega final a apresenta
 
 # Demonstração das Funções
 
-## Soma
-![Teste soma](https://github.com/user-attachments/assets/97dbcf87-2025-4993-9ea9-02d2f3c79545)
+## Soma - Subtração - Multiplicação - Divisão - Fatorial
+![teste 5 funçoes](https://github.com/user-attachments/assets/ebcb4a44-ef63-48cf-800b-39467f179af9)
 
-## Subtração
-![teste subtração](https://github.com/user-attachments/assets/1238da57-1c8b-4890-93e0-d59a602f7888)
+## Juros Simples - Juros Compostos - Equaçao de Segundo Grau - Concatenação
+![teste funçoes 6 a 9](https://github.com/user-attachments/assets/030221bb-e3b4-46b2-923f-66f2101b6afe)
 
-## Multiplicação
-![teste multiplicação](https://github.com/user-attachments/assets/73ca70be-a5ef-4ed6-9fb9-a09280c94814)
-
-
-## Divisão
-![teste divisão](https://github.com/user-attachments/assets/a83b6df9-6dc3-4f34-ab50-8823615eefa7)
-
+## Conversões
+![teste funções de 10 a 15](https://github.com/user-attachments/assets/4ebaa842-aaa2-45ea-8e02-0c06b74b61fc)
 
 # Autores 📃
 | Foto | Aluno | Função                                                                                                  |
