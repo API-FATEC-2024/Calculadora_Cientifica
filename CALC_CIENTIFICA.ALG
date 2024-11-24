@@ -13,7 +13,9 @@ gv_retorno:inteiro
  var
  lv_N1,lv_N2: real
  lv_resultado : real
+
  inicio
+ escreval ("Função Soma")
  escreva ("Escreva o primeiro número: ")
    leia (lv_N1)
    escreva ("Escreva o segundo número: ")
@@ -32,7 +34,9 @@ gv_retorno:inteiro
  var
  lv_M1,lv_M2: real
  lv_resultado : real
+
  inicio
+ escreval ("Função Subtração")
  escreva ("Escreva o primeiro número: ")
    leia (lv_M1)
    escreva ("Escreva o segundo número: ")
@@ -55,6 +59,7 @@ Funcao f_divisao (): real
 
 
   Inicio
+  Escreval ("Função Divisão")
   Escreva ("Digite o dividendo: ")
   Leia (lv_div1)
   Escreva ("Digite o divisor: ")
@@ -74,6 +79,7 @@ Funcao f_multiplicacao (): real
   lv_mult2: Real
 
   Inicio
+  Escreval ("Função Multiplicação")
   Escreva ("Digite o primeiro valor: ")
   Leia (lv_mult1)
   Escreva ("Digite o segundo valor: ")
@@ -90,6 +96,7 @@ var
    i, tam: inteiro
 
 inicio
+   Escreval ("Função Fatorial")
    escreval("Digite um número inteiro: ")
    leia(x)
    
@@ -144,6 +151,7 @@ funcao f_segundoGrau():real
    a, b, c, delta, raiz1, raiz2: real
 
 Inicio
+Escreval ("Função Equação de Segundo Grau")
    EscrevaL("Digite o coeficiente a: ")
    Leia(a)
    Se a = 0 entao
@@ -182,7 +190,7 @@ var
 
 inicio
    //calculo juros simples
-   Escreva ("---Operação de Juros simples---")
+   Escreval ("Função de Juros simples")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
@@ -213,7 +221,7 @@ var
 
 inicio
 //calculo juros composto
-   Escreva("---Operação de Juros Composto---")
+   Escreval ("Função de Juros Composto")
    Escreva ("Digite o valor do capital:")
    leia(lv_capital)
    Escreva ("Digite o valor do tempo (em meses):")
@@ -237,7 +245,7 @@ funcao f_calculoDecimalToBinario(): real
     lv_resto,i,lv_numDec,lv_tamanho: inteiro
     lv_ehValido: logico
   inicio
-  
+  Escreval ("Função conversão de número Binário para Decimal")
     repita
       escreval("Digite um número decimal:")
       leia(lv_numDecString)
@@ -293,7 +301,9 @@ funcao f_calculoBinarioToDecimal(): real
     lv_tam,i:inteiro
     lv_ehValido: logico
     //lv_potencia,lv_numBin,lv_digito: inteiro
+
   inicio
+escreval ("Função conversão de número Binário para Decimal")
     repita
           Escreval("Digite o número Binário: ")
           leia(lv_numBin)
@@ -342,6 +352,7 @@ var
    lv_valido: logico
 
 inicio
+escreval ("Função conversão de número Octal para Binário")
    repita
       Escreval("Digite o número Octal: ")
       leia(lv_numOct)
@@ -409,8 +420,9 @@ funcao f_calculoBinariOtoOctal() : real
   Var
     lv_resto, lv_digitoE, lv_numBin, lv_numOctal: caracter
     lv_tamNumBin, lv_posicaoDig: inteiro
-  inicio
 
+  inicio
+escreval ("Função conversão de número Binário para Octal")
     lv_numOctal <- ""
     Escreval("Digite o número Binário: ")
     leia(lv_numBin)
@@ -461,8 +473,9 @@ funcao f_calculoBinarioToHexacimal():real
     lv_tamNumBin,i,tam, lv_posicaoDig: inteiro
     lv_numBinReal:real
     lv_ehValido:logico
-  inicio
 
+  inicio
+escreval ("Função conversão de número Binário para Hexadecimal")
     lv_numHexa <- ""
     repita
           Escreval("Digite o número Binário: ")
@@ -556,9 +569,9 @@ funcao f_calculoHexadecimalToBinario():real
     lv_digitoHex, lv_numHex, lv_numBin, lv_digitoEmBin,lv_aux: caracter
     lv_posicao,lv_tam,i, lv_tamanho: inteiro
     lv_ehValido: logico
+
   inicio
-
-
+escreval ("Função conversão de número Hexadecimal para Binário")
     repita
           Escreval("Insira um numero hexadecimal (A-F, 0-9):")
           leia(lv_numHex)
@@ -652,8 +665,9 @@ var
    lv_res,lv_string1,lv_string2: caracter
    lim,i: inteiro
    val: logico
-Inicio
 
+Inicio
+escreval ("Função Concatenação de duas String")
    escreval("Digite a primeira string: ")
    leia(lv_string1)
    limpatela
@@ -717,14 +731,14 @@ inicio
       escreval("5-Fatorial")
       escreval("6-Juros Simples")
       escreval("7-Juros Compostos")
-      escreval("8-Resolução de equação do segundo grau")
+      escreval("8-Equação do segundo grau")
       escreval("9-Concatenacao de strings")
-      escreval("10-Conversao B16 para B2")
-      escreval("11-Conversao B2 para B16")
-      escreval("12-Conversao B10 para B2")
-      escreval("13-Conversao B2 para B10")
-      escreval("14-Conversao B8 para B2")
-      escreval("15-Conversao B2 para 8")
+      escreval("10-Conversao Hexadecimal para Binário")
+      escreval("11-Conversao Binário para Hexadecimal")
+      escreval("12-Conversao Decimal para Binário")
+      escreval("13-Conversao Binário para Decimal")
+      escreval("14-Conversao Octal para Binário")
+      escreval("15-Conversao Binário para Octal")
       escreval("0-Encerrar calculadora")
 
       leia(lv_item)
