@@ -191,11 +191,11 @@ var
 inicio
    //calculo juros simples
    Escreval ("Função de Juros simples")
-   Escreva ("Digite o valor do capital (até dez casas decimais - antes ou após da vírgula):")
+   Escreva ("Digite o valor do capital:")
    leia(lv_capital)
-   Escreva ("Digite o valor do tempo (em meses e até dez casas decimais - antes ou após da virgula):")
+   Escreva ("Digite o valor do tempo (em meses):")
    leia(lv_tempo)
-   Escreva ("Digite o valor da taxa (em porcentagem ao mês e até dez casa decimais - antes ou após da vírgula):")
+   Escreva ("Digite o valor da taxa (em porcentagem ao mês):")
    leia(lv_taxa)
 
    lv_juros <- (lv_capital*lv_taxa*lv_tempo)/100
@@ -222,14 +222,14 @@ var
 inicio
 //calculo juros composto
    Escreval ("Função de Juros Composto")
-   Escreva ("Digite o valor do capital (até dez casas decimais - antes ou após da vírgula):")
+   Escreva ("Digite o valor do capital:")
    leia(lv_capital)
-   Escreva ("Digite o valor do tempo (em meses - até dez casas decimais antes ou após da vírgula):")
+   Escreva ("Digite o valor do tempo (em meses):")
    leia(lv_tempo)
-   Escreva ("Digite o valor da taxa (em porcentagem ao mês e até dez casas decimais - antes ou após da vírgula):")
+   Escreva ("Digite o valor da taxa (em porcentagem ao mês):")
    leia(lv_taxa)
 
-   lv_resultado <- (lv_capital/10000000000) *(1+(lv_taxa/10000000000))^(lv_tempo/10000000000)
+   lv_resultado <- lv_capital *(1+(lv_taxa/100))^lv_tempo
 
    escreval ("o valor do juros composto é: ", lv_resultado - lv_capital:1:2)
 
